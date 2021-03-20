@@ -1,9 +1,9 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import Header from '../../../components/Header/Header';
 
 test('renders Dark mode text', () => {
-  render(<App />);
+  render(<Header />);
   const text = screen.getByText(/Dark mode/i);
   expect(text).toBeInTheDocument();
 });
