@@ -20,6 +20,7 @@ function HomeView(): JSX.Element {
         title={card.snippet.title}
         thumbnails={card.snippet.thumbnails.high.url}
         description={card.snippet.description}
+        key={`${card.snippet.title}${card.snippet.publishedAt}`}
       />
     );
   }
