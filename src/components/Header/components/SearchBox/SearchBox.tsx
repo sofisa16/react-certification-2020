@@ -10,7 +10,6 @@ const Search = styled.div`
   &:hover: {
     background-color: rgba(255, 255, 255, 0.25);
   }
-  margin-right: 16px;
   margin-left: 0;
   width: 100%;
 
@@ -32,7 +31,6 @@ const SearchIconInput = styled.div`
 
 const InputInput = styled(InputBase)`
   width: 100%;
-  padding: 8px 8px 8px 0px;
   transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   padding-left: calc(1em + 32px);
 `;
