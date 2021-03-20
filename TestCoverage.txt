@@ -1,0 +1,11 @@
+
+> wizeline_youtube@0.1.0 test /Users/sofisa/Documents/GitHub/react-certification-2020
+> jest "--coverageReporters=text-summary"
+
+
+=============================== Coverage summary ===============================
+Statements   : 95.83% ( 23/24 )
+Branches     : 100% ( 0/0 )
+Functions    : 83.33% ( 5/6 )
+Lines        : 95.83% ( 23/24 )
+================================================================================
