@@ -11,7 +11,7 @@ const MenuMargin = styled.div`
   margin-right: 16px;
 `;
 
-export default function PrimarySearchAppBar(): JSX.Element {
+function Header(): JSX.Element {
   return (
     <div>
       <AppBar position="static">
@@ -39,3 +39,5 @@ export default function PrimarySearchAppBar(): JSX.Element {
     </div>
   );
 }
+
+export default Header;
