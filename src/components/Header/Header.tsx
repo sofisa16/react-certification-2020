@@ -23,6 +23,20 @@ const DarkModeContainer = styled.div`
   margin: 0px 16px;
 `;
 
+const RightSide = styled.div`
+  @media (min-width: 600px) {
+    display: flex;
+  }
+
+  display: none;
+  justify-content: flex-end;
+`;
+
+const ToolbarGrid = styled(Toolbar)`
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+`;
+
 function Header(): JSX.Element {
   const [darkTheme, setDarkTheme] = useState<boolean>(false);
 
@@ -33,7 +47,7 @@ function Header(): JSX.Element {
   return (
     <div>
       <AppBar position="static">
-        <Toolbar>
+        <ToolbarGrid>
           <MenuMargin>
             <IconButton
               edge="start"
@@ -44,23 +58,25 @@ function Header(): JSX.Element {
             </IconButton>
           </MenuMargin>
           <SearchBox />
-          <DarkModeContainer>
-            <Switch
-              checked={darkTheme}
-              onChange={handleChange}
-              name="darkTheme"
-            />
-            <DarkModeText>Dark mode</DarkModeText>
-          </DarkModeContainer>
-          <IconButton
-            edge="end"
-            aria-label="account of current user"
-            aria-haspopup="true"
-            color="inherit"
-          >
-            <AccountCircle />
-          </IconButton>
-        </Toolbar>
+          <RightSide>
+            <DarkModeContainer>
+              <Switch
+                checked={darkTheme}
+                onChange={handleChange}
+                name="darkTheme"
+              />
+              <DarkModeText>Dark mode</DarkModeText>
+            </DarkModeContainer>
+            <IconButton
+              edge="end"
+              aria-label="account of current user"
+              aria-haspopup="true"
+              color="inherit"
+            >
+              <AccountCircle />
+            </IconButton>
+          </RightSide>
+        </ToolbarGrid>
       </AppBar>
     </div>
   );

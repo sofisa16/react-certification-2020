@@ -13,7 +13,7 @@ const Search = styled.div`
   margin-left: 0;
   width: 100%;
 
-  media (min-width: 600px) {
+  @media (min-width: 600px) {
     width: auto;
     margin-left: 24px;
   }
