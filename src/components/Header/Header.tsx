@@ -14,13 +14,13 @@ const MenuMargin = styled.div`
 
 const DarkModeText = styled.span`
   white-space: nowrap;
-  align-self: center;
 `;
 
 const DarkModeContainer = styled.div`
   display: grid;
   grid-template-columns: auto auto;
   margin: 0px 16px;
+  align-items: center;
 `;
 
 const RightSide = styled.div`
