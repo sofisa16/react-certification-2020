@@ -7,20 +7,10 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import styled from "styled-components";
 import SearchBox from './components/SearchBox/SearchBox';
 import Switch from '@material-ui/core/Switch';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
 
 const MenuMargin = styled.div`
   margin-right: 16px;
-`;
-
-const DarkModeText = styled.span`
-  white-space: nowrap;
-`;
-
-const DarkModeContainer = styled.div`
-  display: grid;
-  grid-template-columns: auto auto;
-  margin: 0px 16px;
-  align-items: center;
 `;
 
 const RightSide = styled.div`
@@ -30,6 +20,7 @@ const RightSide = styled.div`
 
   display: none;
   justify-content: flex-end;
+  align-items: center;
 `;
 
 const ToolbarGrid = styled(Toolbar)`
@@ -41,6 +32,7 @@ function Header(): JSX.Element {
   const [darkTheme, setDarkTheme] = useState<boolean>(false);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    event.preventDefault();
     setDarkTheme(event.target.checked);
   };
 
@@ -59,14 +51,17 @@ function Header(): JSX.Element {
           </MenuMargin>
           <SearchBox />
           <RightSide>
-            <DarkModeContainer>
-              <Switch
-                checked={darkTheme}
-                onChange={handleChange}
-                name="darkTheme"
-              />
-              <DarkModeText>Dark mode</DarkModeText>
-            </DarkModeContainer>
+            <FormControlLabel
+              control={
+                <Switch
+                  checked={darkTheme}
+                  onChange={handleChange}
+                  name="darkTheme"
+                  id="darkTheme"
+                />
+              }
+              label="Dark mode"
+            />
             <IconButton
               edge="end"
               aria-label="account of current user"
