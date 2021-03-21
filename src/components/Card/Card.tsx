@@ -30,6 +30,7 @@ function MediaCard(props: MediaCardProps): JSX.Element {
         <CardMediaRoot
           image={thumbnails}
           title={title}
+          alt-text={title}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">

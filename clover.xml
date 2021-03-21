@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1616287177972" clover="3.2.0">
-  <project timestamp="1616287177973" name="All files">
-    <metrics statements="13" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2" elements="16" coveredelements="13" complexity="0" loc="13" ncloc="13" packages="2" files="2" classes="2"/>
+<coverage generated="1616288409851" clover="3.2.0">
+  <project timestamp="1616288409851" name="All files">
+    <metrics statements="17" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="3" elements="21" coveredelements="18" complexity="0" loc="17" ncloc="17" packages="3" files="3" classes="3"/>
+    <package name="Card">
+      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="Card.tsx" path="/Users/sofisa/Documents/GitHub/react-certification-2020/src/components/Card/Card.tsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="27" count="3" type="stmt"/>
+      </file>
+    </package>
     <package name="Header">
       <metrics statements="8" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
       <file name="Header.tsx" path="/Users/sofisa/Documents/GitHub/react-certification-2020/src/components/Header/Header.tsx">
