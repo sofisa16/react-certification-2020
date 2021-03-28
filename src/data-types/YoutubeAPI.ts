@@ -15,7 +15,8 @@ export interface YouTubeResponseItems {
   'etag': string;
   'id': string | {
     'kind': string;
-    'channelId': string;
+    'channelId'?: string;
+    'videoId'?: string;
   },
   'snippet': YouTubeResponseItemSnippet;
   'contentDetails'?: {	
@@ -33,7 +34,7 @@ export interface YouTubeResponseItems {
     'dislikeCount': string;
     'favoriteCount': string;
   },	
-  'player': {	
+  'player'?: {	
     'embedHtml': string;
   }
 }
@@ -44,15 +45,9 @@ export interface YouTubeResponseItemSnippet {
   'title': string;
   'description': string;
   'thumbnails': {
-    'default': {
-      'url': string;
-    },
-    'medium': {
-      'url': string;
-    },
-    'high': {
-      'url': string;
-    },	
+    'default': Thumbnails;
+    'medium': Thumbnails;
+    'high': Thumbnails;
     'standard'?: {	
       'url': string;
       'width': number;
@@ -73,4 +68,10 @@ export interface YouTubeResponseItemSnippet {
     'description': string;
   },
   'publishTime'?: string;
+}
+
+export interface Thumbnails {
+  'url': string;
+  'width': number;
+  'height': number;
 }

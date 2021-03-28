@@ -40,13 +40,13 @@ function HomeView(): JSX.Element {
   useEffect(
     () => {
       const cards: JSX.Element[] = [];
-      for(const card of items) {
+      for(const item of items) {
         cards.push(
           <Card
-            title={card.snippet.title}
-            thumbnails={card.snippet.thumbnails.high.url}
-            description={card.snippet.description}
-            key={`${card.snippet.title}${card.snippet.publishedAt}`}
+            title={item.snippet.title}
+            thumbnails={item.snippet.thumbnails.high.url}
+            description={item.snippet.description}
+            key={`${item.snippet.title}${item.snippet.publishedAt}`}
           />
         );
       }
