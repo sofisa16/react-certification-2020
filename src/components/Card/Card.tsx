@@ -4,7 +4,7 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const CardRoot = styled(Card)`
   width: 345px;
@@ -33,10 +33,10 @@ function MediaCard(props: MediaCardProps): JSX.Element {
           alt-text={title}
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
+          <Typography gutterBottom variant='h5' component='h2'>
             {title}
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
+          <Typography variant='body2' color='textSecondary' component='p'>
             {description}
           </Typography>
         </CardContent>

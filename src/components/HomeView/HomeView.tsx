@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Card from '../Card/Card';
-import youtubeVideosMock from '../../data/youtube-videos-mock.json';
-import styled from "styled-components";
+import styled from 'styled-components';
+import {YouTubeResponse} from '../../data-types/YoutubeAPI';
 
 const CardMediaRoot = styled.div`
   display: grid;
@@ -12,18 +12,41 @@ const CardMediaRoot = styled.div`
 `;
 
 function HomeView(): JSX.Element {
-  const cards: JSX.Element[] = [];
+  const [cards, setCards] = useState<JSX.Element[]>([]);
 
-  for(const card of youtubeVideosMock.items) {
-    cards.push(
-      <Card
-        title={card.snippet.title}
-        thumbnails={card.snippet.thumbnails.high.url}
-        description={card.snippet.description}
-        key={`${card.snippet.title}${card.snippet.publishedAt}`}
-      />
-    );
-  }
+  useEffect(
+    () => {
+      async function searchInYoutube(q: string): Promise<void> {
+        try {
+          const cards: JSX.Element[] = [];
+          const result: YouTubeResponse = 
+            await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${q}&key=${process.env.REACT_APP_KEY}`)
+              .then(
+                (res) => { 
+                  return res.json(); 
+                }
+              );
+          for(const card of result.items) {
+            cards.push(
+              <Card
+                title={card.snippet.title}
+                thumbnails={card.snippet.thumbnails.high.url}
+                description={card.snippet.description}
+                key={`${card.snippet.title}${card.snippet.publishedAt}`}
+              />
+            );
+          }
+          setCards(cards);
+        }
+        catch (error) {
+          console.log(error);
+        }
+      }
+
+      searchInYoutube('wizeline');
+    },
+    []
+  );
 
   return (
     <CardMediaRoot>

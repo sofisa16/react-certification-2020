@@ -1,7 +1,7 @@
 import React from 'react';
 import InputBase from '@material-ui/core/InputBase';
 import SearchIcon from '@material-ui/icons/Search';
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Search = styled.div`
   position: relative;
@@ -46,7 +46,7 @@ function SearchBox(): JSX.Element {
         <SearchIcon />
       </SearchIconInput>
       <ColorInput 
-        placeholder="Search…"
+        placeholder='Search…'
         inputProps={{ 'aria-label': 'search' }}
       />
     </Search>
