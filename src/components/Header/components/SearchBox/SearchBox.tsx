@@ -2,7 +2,7 @@ import React, {useState, useContext} from 'react';
 import InputBase from '@material-ui/core/InputBase';
 import SearchIcon from '@material-ui/icons/Search';
 import styled from 'styled-components';
-import {SearchContext} from '../../../../contexts/SearchContext';
+import {SearchContext} from './../../../../contexts/SearchContext';
 
 const Search = styled.div`
   position: relative;

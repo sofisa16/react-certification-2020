@@ -1,8 +1,9 @@
 import React, {useState, useEffect, useContext} from 'react';
-import Card from '../Card/Card';
+import Card from './../Card/Card';
 import styled from 'styled-components';
-import {YouTubeResponse} from '../../data-types/YoutubeAPI';
+import {YouTubeResponse} from './../../data-types/YoutubeAPI';
 import {SearchContext} from './../../contexts/SearchContext';
+import useYouTubeAPI from './../../hooks/useYouTubeAPI';
 
 const CardMediaRoot = styled.div`
   display: grid;
@@ -15,19 +16,16 @@ const CardMediaRoot = styled.div`
 function HomeView(): JSX.Element {
   const [cards, setCards] = useState<JSX.Element[]>([]);
   const {search} = useContext(SearchContext);
+  const {getFromYouTubeAPI} = useYouTubeAPI();
 
   useEffect(
     () => {
       async function searchInYoutube(q: string): Promise<void> {
         try {
           const cards: JSX.Element[] = [];
-          const result: YouTubeResponse = 
-            await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${q}&key=${process.env.REACT_APP_KEY}`)
-              .then(
-                (res) => { 
-                  return res.json(); 
-                }
-              );
+          const response: Response = await getFromYouTubeAPI(`search?part=snippet&q=${q}`);
+          const result: YouTubeResponse = await response.json();
+
           for(const card of result.items) {
             cards.push(
               <Card
