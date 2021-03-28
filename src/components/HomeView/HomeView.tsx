@@ -1,7 +1,8 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import Card from '../Card/Card';
 import styled from 'styled-components';
 import {YouTubeResponse} from '../../data-types/YoutubeAPI';
+import {SearchContext} from './../../contexts/SearchContext';
 
 const CardMediaRoot = styled.div`
   display: grid;
@@ -13,6 +14,7 @@ const CardMediaRoot = styled.div`
 
 function HomeView(): JSX.Element {
   const [cards, setCards] = useState<JSX.Element[]>([]);
+  const {search} = useContext(SearchContext);
 
   useEffect(
     () => {
@@ -43,9 +45,9 @@ function HomeView(): JSX.Element {
         }
       }
 
-      searchInYoutube('wizeline');
+      searchInYoutube(search);
     },
-    []
+    [search]
   );
 
   return (
