@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useContext} from 'react';
 import Card from './../Card/Card';
 import styled from 'styled-components';
-import {YouTubeResponse} from './../../data-types/YoutubeAPI';
+import {YouTubeResponse, YouTubeResponseItems} from './../../data-types/YoutubeAPI';
 import {SearchContext} from './../../contexts/SearchContext';
 import useYouTubeAPI from './../../hooks/useYouTubeAPI';
 
@@ -15,6 +15,7 @@ const CardMediaRoot = styled.div`
 
 function HomeView(): JSX.Element {
   const [cards, setCards] = useState<JSX.Element[]>([]);
+  const [items, setItems] = useState<YouTubeResponseItems[]>([]);
   const {search} = useContext(SearchContext);
   const {getFromYouTubeAPI} = useYouTubeAPI();
 
@@ -22,21 +23,9 @@ function HomeView(): JSX.Element {
     () => {
       async function searchInYoutube(q: string): Promise<void> {
         try {
-          const cards: JSX.Element[] = [];
           const response: Response = await getFromYouTubeAPI(`search?part=snippet&q=${q}`);
           const result: YouTubeResponse = await response.json();
-
-          for(const card of result.items) {
-            cards.push(
-              <Card
-                title={card.snippet.title}
-                thumbnails={card.snippet.thumbnails.high.url}
-                description={card.snippet.description}
-                key={`${card.snippet.title}${card.snippet.publishedAt}`}
-              />
-            );
-          }
-          setCards(cards);
+          setItems(result.items);
         }
         catch (error) {
           console.log(error);
@@ -46,6 +35,24 @@ function HomeView(): JSX.Element {
       searchInYoutube(search);
     },
     [search]
+  );
+
+  useEffect(
+    () => {
+      const cards: JSX.Element[] = [];
+      for(const card of items) {
+        cards.push(
+          <Card
+            title={card.snippet.title}
+            thumbnails={card.snippet.thumbnails.high.url}
+            description={card.snippet.description}
+            key={`${card.snippet.title}${card.snippet.publishedAt}`}
+          />
+        );
+      }
+      setCards(cards);
+    },
+    [items]
   );
 
   return (
