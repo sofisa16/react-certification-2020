@@ -23,7 +23,7 @@ function HomeView(): JSX.Element {
     () => {
       async function searchInYoutube(q: string): Promise<void> {
         try {
-          const response: Response = await getFromYouTubeAPI(`search?part=snippet&q=${q}`);
+          const response: Response = await getFromYouTubeAPI(`search?part=id&part=snippet&maxResults=25&q=${q}&type=video`);
           const result: YouTubeResponse = await response.json();
           setItems(result.items);
         }

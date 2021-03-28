@@ -1,0 +1,85 @@
+{
+  "kind": "youtube#videoListResponse",
+  "etag": "GkrnL5WlettnnB-Pr6eXX7M4c54",
+  "items": [
+    {
+      "kind": "youtube#video",
+      "etag": "6Cl_rbEir8Gdk95eXmACiM9-e3E",
+      "id": "CQzUsTFqtW0",
+      "snippet": {
+        "publishedAt": "2007-06-28T22:01:10Z",
+        "channelId": "UCvtfT-xYX4Q-jC2Mbsk3OUA",
+        "title": "Skateboarding Dog",
+        "description": "**  10/27/15 Farewell Tillman RIP  **  Tillman the skateboarding bulldog from the iphone commercial. All clips are from January 2007. Tillman was a little over a year old at the time. \nA little history of this first video. I Filmed the video using a just purchased Panasonic Lumix TZ1. I was bicycling through Venice Beach California when I came upon the skateboarding dog. Originally the first video had the soundtrack \"Giving In\" by linkin Park. Once the video appeared in iphone commercials I  removed the video from youtube because of the attention it was getting and I had no rights to use the song. As time approached for Apple's release of the iphone with youtube, youtube contacted me and requested I reinstate the video without the soundtrack. Youtube wanted users to be able to view the skateboarding dog in the store and after purchasing their iphone. Unfortunately youtube gave me only a few hours to re-edited video before the iphone release.  The original background sound on most of the clips was ruined by hysterical laughter from a woman watching Tillman so I cut and pasted sound in from other parts of the video to cover the laughter. That's why some claim they hear the word eskimo over and over-lol. When the original video with the Linkin Park soundtrack was selected it had around 15,000 views.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/CQzUsTFqtW0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/CQzUsTFqtW0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/CQzUsTFqtW0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "RNickeyMouse",
+        "tags": [
+          "skateboarding",
+          "dog",
+          "bulldog",
+          "iphone",
+          "commercial",
+          "animal",
+          "tricks",
+          "skate",
+          "pets",
+          "youtube",
+          "wheels",
+          "snake",
+          "sk8",
+          "amazing",
+          "skating",
+          "Skateboard",
+          "Dogs",
+          "rnickeymouse",
+          "yt:crop=16:9"
+        ],
+        "categoryId": "15",
+        "liveBroadcastContent": "none",
+        "localized": {
+          "title": "Skateboarding Dog",
+          "description": "**  10/27/15 Farewell Tillman RIP  **  Tillman the skateboarding bulldog from the iphone commercial. All clips are from January 2007. Tillman was a little over a year old at the time. \nA little history of this first video. I Filmed the video using a just purchased Panasonic Lumix TZ1. I was bicycling through Venice Beach California when I came upon the skateboarding dog. Originally the first video had the soundtrack \"Giving In\" by linkin Park. Once the video appeared in iphone commercials I  removed the video from youtube because of the attention it was getting and I had no rights to use the song. As time approached for Apple's release of the iphone with youtube, youtube contacted me and requested I reinstate the video without the soundtrack. Youtube wanted users to be able to view the skateboarding dog in the store and after purchasing their iphone. Unfortunately youtube gave me only a few hours to re-edited video before the iphone release.  The original background sound on most of the clips was ruined by hysterical laughter from a woman watching Tillman so I cut and pasted sound in from other parts of the video to cover the laughter. That's why some claim they hear the word eskimo over and over-lol. When the original video with the Linkin Park soundtrack was selected it had around 15,000 views."
+        }
+      },
+      "contentDetails": {
+        "duration": "PT1M29S",
+        "dimension": "2d",
+        "definition": "sd",
+        "caption": "true",
+        "licensedContent": true,
+        "contentRating": {},
+        "projection": "rectangular"
+      },
+      "statistics": {
+        "viewCount": "22824918",
+        "likeCount": "59500",
+        "dislikeCount": "1703",
+        "favoriteCount": "0",
+        "commentCount": "8875"
+      },
+      "player": {
+        "embedHtml": "\u003ciframe width=\"480\" height=\"360\" src=\"//www.youtube.com/embed/CQzUsTFqtW0\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen\u003e\u003c/iframe\u003e"
+      }
+    }
+  ],
+  "pageInfo": {
+    "totalResults": 1,
+    "resultsPerPage": 1
+  }
+}
