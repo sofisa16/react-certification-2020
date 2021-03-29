@@ -30,6 +30,10 @@ const Title = styled(Typography)`
   text-overflow: ellipsis;
 `;
 
+const ColorNoStyleLink = styled(NoStyleLink)`
+  color: inherit;
+`;
+
 interface RelatedVideoProps {
   title: string;
   thumbnails: string;
@@ -41,7 +45,7 @@ function RelatedVideo(props: RelatedVideoProps): JSX.Element {
   const link = `/${videoId}`;
 
   return (
-    <NoStyleLink to={link}>
+    <ColorNoStyleLink to={link}>
       <ParentContainer>
         <RightContainer src={thumbnails} alt="image" />
         <LeftContainer>
@@ -50,7 +54,7 @@ function RelatedVideo(props: RelatedVideoProps): JSX.Element {
           </Title>
         </LeftContainer>
       </ParentContainer>
-    </NoStyleLink>
+    </ColorNoStyleLink>
   );
 }
 

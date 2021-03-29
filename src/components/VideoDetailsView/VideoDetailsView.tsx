@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import {useParams} from 'react-router-dom';
 import styled from 'styled-components';
-//import useYouTubeAPI from './../../hooks/useYouTubeAPI';
+import useYouTubeAPI from './../../hooks/useYouTubeAPI';
 import {YouTubeResponse, YouTubeResponseItems} from './../../data-types/YoutubeAPI';
-import videos_id from './../../data/videos_id.json';
+//import videos_id from './../../data/videos_id.json';
 import related_videos from './../../data/related_videos.json';
 import Typography from '@material-ui/core/Typography';
 import RelatedVideo from './../RelatedVideo/RelatedVideo';
@@ -57,20 +57,20 @@ const Iframe = styled.div`
 
 function VideoDetailsView(): JSX.Element {
   const {videoId} = useParams<VideoDetailsViewParams>();
-  //const {getFromYouTubeAPI} = useYouTubeAPI();
+  const {getFromYouTubeAPI} = useYouTubeAPI();
   const [items, setItems] = useState<YouTubeResponseItems[]>([]);
   const [relatedItems, setRelatedItems] = useState<YouTubeResponseItems[]>([]);
-  const result: YouTubeResponse = videos_id;
-  const related: YouTubeResponse = related_videos;
+  //const result: YouTubeResponse = videos_id;
+  //const related: YouTubeResponse = related_videos;
   const [embedHtml, setEmbedHtml] = useState<string>('');
   const [relatedVideos, setRelatedVideos] = useState<JSX.Element[]>([]);
 
   useEffect(
     () => {
-      async function getVideoFromYoutube(/*videoId: string*/): Promise<void> {
+      async function getVideoFromYoutube(videoId: string): Promise<void> {
         try {
-          //const response: Response = await getFromYouTubeAPI(`videos?part=contentDetails&part=id&part=player&part=snippet&part=statistics&id=${videoId}`);
-          //const result: YouTubeResponse = await response.json();
+          const response: Response = await getFromYouTubeAPI(`videos?part=contentDetails&part=id&part=player&part=snippet&part=statistics&id=${videoId}`);
+          const result: YouTubeResponse = await response.json();
           
           setItems(result.items);
         }
@@ -79,20 +79,20 @@ function VideoDetailsView(): JSX.Element {
         }
       }
 
-      async function getRelatedVideosFromYoutube(/*videoId: string*/): Promise<void> {
+      async function getRelatedVideosFromYoutube(videoId: string): Promise<void> {
         try {
-          //const response: Response = await getFromYouTubeAPI(`search?part=id&part=snippet&maxResults=25&relatedToVideoId=${videoId}&type=video`);
-          //const result: YouTubeResponse = await response.json();
+          const response: Response = await getFromYouTubeAPI(`search?part=id&part=snippet&maxResults=25&relatedToVideoId=${videoId}&type=video`);
+          const result: YouTubeResponse = await response.json();
           
-          setRelatedItems(related.items);
+          setRelatedItems(result.items);
         }
         catch (error) {
           console.log(error);
         }
       }
 
-      getVideoFromYoutube(/*videoId*/);
-      getRelatedVideosFromYoutube(/*videoId*/);
+      getVideoFromYoutube(videoId);
+      getRelatedVideosFromYoutube(videoId);
     },
     [videoId]
   );
