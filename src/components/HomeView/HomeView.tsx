@@ -42,15 +42,17 @@ function HomeView(): JSX.Element {
       const cards: JSX.Element[] = [];
       for(const item of items) {
         const id = typeof(item.id) === 'string' ? item.id : item.id.videoId;
-        cards.push(
-          <Card
-            title={item.snippet.title}
-            thumbnails={item.snippet.thumbnails.high.url}
-            description={item.snippet.description}
-            videoId={`${id}`}
-            key={`${item.snippet.title}${item.snippet.publishedAt}`}
-          />
-        );
+        if(item.snippet) {
+          cards.push(
+            <Card
+              title={item.snippet.title}
+              thumbnails={item.snippet.thumbnails.high.url}
+              description={item.snippet.description}
+              videoId={`${id}`}
+              key={`${item.snippet.title}${item.snippet.publishedAt}`}
+            />
+          );
+        }
       }
       setCards(cards);
     },

@@ -18,7 +18,7 @@ export interface YouTubeResponseItems {
     'channelId'?: string;
     'videoId'?: string;
   },
-  'snippet': YouTubeResponseItemSnippet;
+  'snippet'?: YouTubeResponseItemSnippet;
   'contentDetails'?: {	
     'duration': string;
     'dimension': string;

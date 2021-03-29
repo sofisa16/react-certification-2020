@@ -4,7 +4,8 @@ import styled from 'styled-components';
 import useYouTubeAPI from './../../hooks/useYouTubeAPI';
 import {YouTubeResponse, YouTubeResponseItems} from './../../data-types/YoutubeAPI';
 //import videos_id from './../../data/videos_id.json';
-import related_videos from './../../data/related_videos.json';
+//import bug from './../../data/bug.json';
+//import related_videos from './../../data/related_videos.json';
 import Typography from '@material-ui/core/Typography';
 import RelatedVideo from './../RelatedVideo/RelatedVideo';
 
@@ -61,7 +62,7 @@ function VideoDetailsView(): JSX.Element {
   const [items, setItems] = useState<YouTubeResponseItems[]>([]);
   const [relatedItems, setRelatedItems] = useState<YouTubeResponseItems[]>([]);
   //const result: YouTubeResponse = videos_id;
-  //const related: YouTubeResponse = related_videos;
+  //const related: YouTubeResponse = bug;
   const [embedHtml, setEmbedHtml] = useState<string>('');
   const [relatedVideos, setRelatedVideos] = useState<JSX.Element[]>([]);
 
@@ -111,14 +112,16 @@ function VideoDetailsView(): JSX.Element {
       const related: JSX.Element[] = [];
       for(const item of relatedItems) {
         const id = typeof(item.id) === 'string' ? item.id : item.id.videoId;
-        related.push(
-          <RelatedVideo
-            title={item.snippet.title}
-            thumbnails={item.snippet.thumbnails.default.url}
-            videoId={`${id}`}
-            key={`${item.snippet.title}${item.snippet.publishedAt}`}
-          />
-        );
+        if(item.snippet) {
+          related.push(
+            <RelatedVideo
+              title={item.snippet.title}
+              thumbnails={item.snippet.thumbnails.default.url}
+              videoId={`${id}`}
+              key={`${item.snippet.title}${item.snippet.publishedAt}`}
+            />
+          );
+        }
       }
       setRelatedVideos(related);
     },
@@ -138,11 +141,11 @@ function VideoDetailsView(): JSX.Element {
         <DownContainer>
           <TitleContainer>
             <Typography gutterBottom variant='h5' component='h2'>
-              {items && items[0] && items[0].snippet.title}
+              {items && items[0] && items[0].snippet && items[0].snippet.title}
             </Typography>
           </TitleContainer>
           <JustifyText variant='body2' color='textSecondary'>
-            {items && items[0] && items[0].snippet.description}
+            {items && items[0] && items[0].snippet && items[0].snippet.description}
           </JustifyText>
         </DownContainer>
       </RightContainer>
