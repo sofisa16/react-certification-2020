@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Typography from '@material-ui/core/Typography';
+import {NoStyleLink} from './../../styles/common';
 
 const ParentContainer = styled.div`
   height: 90px;
@@ -32,20 +33,24 @@ const Title = styled(Typography)`
 interface RelatedVideoProps {
   title: string;
   thumbnails: string;
+  videoId: string;
 }
 
 function RelatedVideo(props: RelatedVideoProps): JSX.Element {
-  const {title, thumbnails} = props;
+  const {title, thumbnails, videoId} = props;
+  const link = `/${videoId}`;
 
   return (
-    <ParentContainer>
-      <RightContainer src={thumbnails} alt="image" />
-      <LeftContainer>
-        <Title variant='body1'>
-          {title}
-        </Title>
-      </LeftContainer>
-    </ParentContainer>
+    <NoStyleLink to={link}>
+      <ParentContainer>
+        <RightContainer src={thumbnails} alt="image" />
+        <LeftContainer>
+          <Title variant='body1'>
+            {title}
+          </Title>
+        </LeftContainer>
+      </ParentContainer>
+    </NoStyleLink>
   );
 }
 

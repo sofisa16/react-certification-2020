@@ -110,10 +110,12 @@ function VideoDetailsView(): JSX.Element {
     () => {
       const related: JSX.Element[] = [];
       for(const item of relatedItems) {
+        const id = typeof(item.id) === 'string' ? item.id : item.id.videoId;
         related.push(
           <RelatedVideo
             title={item.snippet.title}
             thumbnails={item.snippet.thumbnails.default.url}
+            videoId={`${id}`}
             key={`${item.snippet.title}${item.snippet.publishedAt}`}
           />
         );
