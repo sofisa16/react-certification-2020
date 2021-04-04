@@ -1,12 +1,18 @@
 import React, {useState, useEffect} from 'react';
-import {createMuiTheme, ThemeProvider, Theme} from '@material-ui/core/styles';
+import {ThemeProvider} from 'styled-components';
+import NoSsr from '@material-ui/core/NoSsr';
+import {
+  createMuiTheme,
+  ThemeProvider as MuiThemeProvider,
+  Theme,
+} from '@material-ui/core/styles';
 
 interface GlobalContextValues {
   search: string;
   setSearch: React.Dispatch<React.SetStateAction<string>>;
   darkState: boolean;
   setDarkState: React.Dispatch<React.SetStateAction<boolean>>;
-  darkTheme: Theme;
+  theme: Theme;
 }
 
 interface GlobalContextProviderProps {
@@ -18,7 +24,7 @@ const GlobalContext = React.createContext<GlobalContextValues>({
   setSearch: () => { return; },
   darkState: false,
   setDarkState: () => { return; },
-  darkTheme: createMuiTheme({
+  theme: createMuiTheme({
     palette: {
       type: 'light',
     }
@@ -29,7 +35,7 @@ const GlobalContextProvider: React.FunctionComponent<GlobalContextProviderProps>
   (props: GlobalContextProviderProps) => {
     const [search, setSearch] = useState<string>('wizeline');
     const [darkState, setDarkState] = useState<boolean>(false);
-    const [darkTheme, setDarkTheme] = useState<Theme>(
+    const [theme, setTheme] = useState<Theme>(
       createMuiTheme({
         palette: {
           type: 'light',
@@ -40,7 +46,7 @@ const GlobalContextProvider: React.FunctionComponent<GlobalContextProviderProps>
     useEffect(
       () => {
         const palletType = darkState ? 'dark' : 'light';
-        setDarkTheme(
+        setTheme(
           createMuiTheme({
             palette: {
               type: palletType,
@@ -56,17 +62,21 @@ const GlobalContextProvider: React.FunctionComponent<GlobalContextProviderProps>
       setSearch,
       darkState,
       setDarkState,
-      darkTheme,
+      theme,
     };
 
     return (
-      <ThemeProvider theme={darkTheme}>
-        <GlobalContext.Provider
-          value={value}
-        >
-          {props.children}
-        </GlobalContext.Provider>
-      </ThemeProvider>
+      <NoSsr>
+        <MuiThemeProvider theme={theme}>
+          <ThemeProvider theme={theme}>
+            <GlobalContext.Provider
+              value={value}
+            >
+              {props.children}
+            </GlobalContext.Provider>
+          </ThemeProvider>
+        </MuiThemeProvider>
+      </NoSsr>
     );
   };
 
