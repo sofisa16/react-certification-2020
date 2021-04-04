@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
@@ -8,7 +8,14 @@ import styled from 'styled-components';
 import SearchBox from './components/SearchBox/SearchBox';
 import Switch from '@material-ui/core/Switch';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Drawer from '@material-ui/core/Drawer';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
 import {GlobalContext} from './../../contexts/GlobalContext';
+import HomeIcon from '@material-ui/icons/Home';
+import {useHistory} from 'react-router-dom';
 
 const MenuMargin = styled.div`
   margin-right: 16px;
@@ -39,16 +46,40 @@ const StyledAppBar = styled(AppBar)<StyledAppBarProps>`
   `}
 `;
 
+const StyledListItemIcon = styled(ListItemIcon)`
+  min-width: 24px;
+  padding-right: 12px;
+`;
+
+const StyledList = styled(List)`
+  width: 250px;
+`;
+
 function Header(): JSX.Element {
   const { darkState, setDarkState } = useContext(GlobalContext);
+  const [openDrawer, setOpenDrawer] = useState<boolean>(false);
+  const history = useHistory();
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     event.preventDefault();
     setDarkState(event.target.checked);
   };
 
+  function onClick(): void {
+    setOpenDrawer(false);
+    history.push('/');
+  }
+
   return (
     <div>
+      <Drawer anchor='left' open={openDrawer} onClose={() => { setOpenDrawer(false); }}>
+        <StyledList>
+          <ListItem button key={'home'} onClick={onClick}>
+            <StyledListItemIcon><HomeIcon /></StyledListItemIcon>
+            <ListItemText primary={"Home"} />
+          </ListItem>
+        </StyledList>
+      </Drawer>
       <StyledAppBar position='static' darkState={darkState}>
         <ToolbarGrid>
           <MenuMargin>
@@ -57,7 +88,7 @@ function Header(): JSX.Element {
               color='inherit'
               aria-label='open panel'
             >
-              <MenuIcon />
+              <MenuIcon onClick={() => { setOpenDrawer(true); }}/>
             </IconButton>
           </MenuMargin>
           <SearchBox />
