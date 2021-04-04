@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useContext} from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
@@ -8,6 +8,7 @@ import styled from 'styled-components';
 import SearchBox from './components/SearchBox/SearchBox';
 import Switch from '@material-ui/core/Switch';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
+import {GlobalContext} from './../../contexts/GlobalContext';
 
 const MenuMargin = styled.div`
   margin-right: 16px;
@@ -29,16 +30,16 @@ const ToolbarGrid = styled(Toolbar)`
 `;
 
 function Header(): JSX.Element {
-  const [darkTheme, setDarkTheme] = useState<boolean>(false);
+  const {darkState, setDarkState} = useContext(GlobalContext);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     event.preventDefault();
-    setDarkTheme(event.target.checked);
+    setDarkState(event.target.checked);
   };
 
   return (
     <div>
-      <AppBar position='static'>
+      <AppBar position='static' color='primary'>
         <ToolbarGrid>
           <MenuMargin>
             <IconButton
@@ -54,7 +55,7 @@ function Header(): JSX.Element {
             <FormControlLabel
               control={
                 <Switch
-                  checked={darkTheme}
+                  checked={darkState}
                   onChange={handleChange}
                   name='darkTheme'
                   id='darkTheme'

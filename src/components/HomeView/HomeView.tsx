@@ -2,13 +2,13 @@ import React, {useState, useEffect, useContext} from 'react';
 import Card from './../Card/Card';
 import styled from 'styled-components';
 import {YouTubeResponse, YouTubeResponseItems} from './../../data-types/YoutubeAPI';
-import {SearchContext} from './../../contexts/SearchContext';
+import {GlobalContext} from '../../contexts/GlobalContext';
 import useYouTubeAPI from './../../hooks/useYouTubeAPI';
+//import home_videos from './../../data/home_videos.json';
 
 const CardMediaRoot = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(365px, 1fr));
-  padding: 20px;
   margin: 32px;
   justify-items: center;
 `;
@@ -16,8 +16,9 @@ const CardMediaRoot = styled.div`
 function HomeView(): JSX.Element {
   const [cards, setCards] = useState<JSX.Element[]>([]);
   const [items, setItems] = useState<YouTubeResponseItems[]>([]);
-  const {search} = useContext(SearchContext);
+  const {search} = useContext(GlobalContext);
   const {getFromYouTubeAPI} = useYouTubeAPI();
+  //const result = home_videos;
 
   useEffect(
     () => {

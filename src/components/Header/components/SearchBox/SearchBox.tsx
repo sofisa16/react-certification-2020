@@ -3,7 +3,7 @@ import {useLocation, useHistory} from 'react-router-dom';
 import InputBase from '@material-ui/core/InputBase';
 import SearchIcon from '@material-ui/icons/Search';
 import styled from 'styled-components';
-import {SearchContext} from './../../../../contexts/SearchContext';
+import {GlobalContext} from '../../../../contexts/GlobalContext';
 
 const Search = styled.div`
   position: relative;
@@ -42,7 +42,7 @@ const ColorInput = styled(InputInput)`
 `;
 
 function SearchBox(): JSX.Element {
-  const {setSearch} = useContext(SearchContext);
+  const {setSearch} = useContext(GlobalContext);
   const [localSearch, setLocalSearch] = useState<string>("");
   const queryString = useLocation();
   const history = useHistory();
