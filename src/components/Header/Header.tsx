@@ -29,8 +29,18 @@ const ToolbarGrid = styled(Toolbar)`
   grid-template-columns: auto auto 1fr;
 `;
 
+interface StyledAppBarProps {
+  darkState: boolean;
+}
+
+const StyledAppBar = styled(AppBar)<StyledAppBarProps>`
+  ${({ theme, darkState }) => `
+    background-color: ${darkState ? '#1C5476' : theme.palette.primary.main}
+  `}
+`;
+
 function Header(): JSX.Element {
-  const {darkState, setDarkState} = useContext(GlobalContext);
+  const { darkState, setDarkState } = useContext(GlobalContext);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     event.preventDefault();
@@ -39,7 +49,7 @@ function Header(): JSX.Element {
 
   return (
     <div>
-      <AppBar position='static' color='primary'>
+      <StyledAppBar position='static' darkState={darkState}>
         <ToolbarGrid>
           <MenuMargin>
             <IconButton
@@ -73,7 +83,7 @@ function Header(): JSX.Element {
             </IconButton>
           </RightSide>
         </ToolbarGrid>
-      </AppBar>
+      </StyledAppBar>
     </div>
   );
 }
