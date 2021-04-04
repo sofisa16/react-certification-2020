@@ -4,6 +4,8 @@ import Card from '../../../components/Card/Card';
 import { createMemoryHistory } from 'history';
 import { Router } from 'react-router-dom';
 import renderer from 'react-test-renderer';
+import {GlobalContextProvider} from './../../../contexts/GlobalContext';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 test('renders Card title', () => {
   const history = createMemoryHistory();
@@ -52,15 +54,19 @@ it('renders Card component', () => {
 
   const tree = renderer
     .create(
-      <Router history={history}>
-        <Card
-          title="title"
-          thumbnails="thumbnails"
-          description="description"
-          key="key"
-          videoId="a"
-        />
-      </Router>
+      <GlobalContextProvider>
+        <CssBaseline>
+          <Router history={history}>
+            <Card
+              title="title"
+              thumbnails="thumbnails"
+              description="description"
+              key="key"
+              videoId="a"
+            />
+          </Router>
+        </CssBaseline>
+      </GlobalContextProvider>
     )
     .toJSON();
   expect(tree).toMatchSnapshot();
