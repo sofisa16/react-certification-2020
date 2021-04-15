@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useReducer} from 'react';
 import {ThemeProvider} from 'styled-components';
 import NoSsr from '@material-ui/core/NoSsr';
 import {
@@ -6,6 +6,7 @@ import {
   ThemeProvider as MuiThemeProvider,
   Theme,
 } from '@material-ui/core/styles';
+import {initialState, reducer, FavoriteVideos, Action} from './../components/FavoritesView/addToFavorites';
 
 interface GlobalContextValues {
   search: string;
@@ -13,6 +14,8 @@ interface GlobalContextValues {
   darkState: boolean;
   setDarkState: React.Dispatch<React.SetStateAction<boolean>>;
   theme: Theme;
+  favoriteVideos: FavoriteVideos;
+  dispatchFav: React.Dispatch<Action>;
 }
 
 interface GlobalContextProviderProps {
@@ -29,6 +32,8 @@ const GlobalContext = React.createContext<GlobalContextValues>({
       type: 'light',
     }
   }),
+  favoriteVideos: {},
+  dispatchFav: () => { return; },
 });
 
 const GlobalContextProvider: React.FunctionComponent<GlobalContextProviderProps> =
@@ -42,6 +47,7 @@ const GlobalContextProvider: React.FunctionComponent<GlobalContextProviderProps>
         },
       })
     );
+    const [favoriteVideos, dispatchFav] = useReducer(reducer, initialState);
 
     useEffect(
       () => {
@@ -63,6 +69,8 @@ const GlobalContextProvider: React.FunctionComponent<GlobalContextProviderProps>
       darkState,
       setDarkState,
       theme,
+      favoriteVideos,
+      dispatchFav,
     };
 
     return (

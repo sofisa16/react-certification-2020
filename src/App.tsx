@@ -6,6 +6,7 @@ import VideoDetailsView from './components/VideoDetailsView/VideoDetailsView';
 import {GlobalContextProvider} from './contexts/GlobalContext';
 import Container from '@material-ui/core/Container';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import FavoritesView from './components/FavoritesView/FavoritesView';
 
 function App(): JSX.Element {
   return (
@@ -16,6 +17,9 @@ function App(): JSX.Element {
           <Switch>
             <Route exact path='/'>
               <HomeView />
+            </Route>
+            <Route exact path='/favorites'>
+              <FavoritesView />
             </Route>
             <Route path='/:videoId'>
               <VideoDetailsView />

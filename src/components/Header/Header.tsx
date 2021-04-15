@@ -15,6 +15,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import {GlobalContext} from './../../contexts/GlobalContext';
 import HomeIcon from '@material-ui/icons/Home';
+import FavoriteIcon from '@material-ui/icons/Favorite';
 import {useHistory} from 'react-router-dom';
 
 const MenuMargin = styled.div`
@@ -70,6 +71,11 @@ function Header(): JSX.Element {
     history.push('/');
   }
 
+  function onClickFav(): void {
+    setOpenDrawer(false);
+    history.push('/favorites');
+  }
+
   return (
     <div>
       <Drawer anchor='left' open={openDrawer} onClose={() => { setOpenDrawer(false); }}>
@@ -77,6 +83,10 @@ function Header(): JSX.Element {
           <ListItem button key={'home'} onClick={onClick}>
             <StyledListItemIcon><HomeIcon /></StyledListItemIcon>
             <ListItemText primary={"Home"} />
+          </ListItem>
+          <ListItem button key={'favorite'} onClick={onClickFav}>
+            <StyledListItemIcon><FavoriteIcon /></StyledListItemIcon>
+            <ListItemText primary={"Favorites"} />
           </ListItem>
         </StyledList>
       </Drawer>
