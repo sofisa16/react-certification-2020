@@ -4,7 +4,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import AccountCircle from '@material-ui/icons/AccountCircle';
-import styled from "styled-components";
+import styled from 'styled-components';
 import SearchBox from './components/SearchBox/SearchBox';
 import Switch from '@material-ui/core/Switch';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -38,13 +38,13 @@ function Header(): JSX.Element {
 
   return (
     <div>
-      <AppBar position="static">
+      <AppBar position='static'>
         <ToolbarGrid>
           <MenuMargin>
             <IconButton
-              edge="start"
-              color="inherit"
-              aria-label="open panel"
+              edge='start'
+              color='inherit'
+              aria-label='open panel'
             >
               <MenuIcon />
             </IconButton>
@@ -56,17 +56,17 @@ function Header(): JSX.Element {
                 <Switch
                   checked={darkTheme}
                   onChange={handleChange}
-                  name="darkTheme"
-                  id="darkTheme"
+                  name='darkTheme'
+                  id='darkTheme'
                 />
               }
-              label="Dark mode"
+              label='Dark mode'
             />
             <IconButton
-              edge="end"
-              aria-label="account of current user"
-              aria-haspopup="true"
-              color="inherit"
+              edge='end'
+              aria-label='account of current user'
+              aria-haspopup='true'
+              color='inherit'
             >
               <AccountCircle />
             </IconButton>

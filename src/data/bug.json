@@ -1,0 +1,1071 @@
+{
+  "kind": "youtube#searchListResponse",
+  "etag": "Z0EA8Loq5bHZNBiWRMv3jFNRxy0",
+  "nextPageToken": "CBkQAA",
+  "regionCode": "US",
+  "pageInfo": {
+    "totalResults": 134,
+    "resultsPerPage": 25
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Ptln-Xiu1cN8Ry7QeaHDsxcez68",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "lOTmYcxCxjU"
+      },
+      "snippet": {
+        "publishedAt": "2020-12-07T22:51:17Z",
+        "channelId": "UCHAK6CyegY22Zj2GWrcaIxg",
+        "title": "Inside Microsoft's Massive Headquarters",
+        "description": "Microsoft is one of the most influential and high-tech companies the world has ever seen. But have you ever wondered what it’s like to work there? Microsoft’s sprawling headquarters is no vanilla corporate office – instead, it’s more of a miniature city, with its own transit system, shopping mall, treehouses and even a grimy lake for dunking cocky senior executives. And that’s before we get into the secret underground tech labs where the very future of all our online lives is being developed. Or the hallway where high-fives are mandatory. \n\nSo join us today as we don our trusty lanyard and delve deep inside the Microsoft headquarters. \n\nCovering an area of just over 500 acres in the Seattle suburb of Redmond, Washington, Microsoft Headquarters is quite rightly known as a campus. And just like a university or college campus, it comprises dozens of buildings – over a hundred all told – as well as sports fields, woodland trails and secluded courtyards for taking well-earned breaks. \n\nInside Microsoft's Massive Headquarters",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/lOTmYcxCxjU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/lOTmYcxCxjU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/lOTmYcxCxjU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/lOTmYcxCxjU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/lOTmYcxCxjU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Tech Vision",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-12-07T22:51:17Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "1Gpx6cc6l7oG9zqEKUDwHZ1NfPI",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "f1fbuOkxugs"
+      },
+      "snippet": {
+        "publishedAt": "2020-09-25T21:07:14Z",
+        "channelId": "UCHAK6CyegY22Zj2GWrcaIxg",
+        "title": "Facebook Is Building A City For Its Employees",
+        "description": "Right in the heart of silicon valley, Facebook is cooking up a big new project to expand its Menlo Park campus into what can only be described as a fully-fledged town.\n\nSince humble beginnings in Zuckerberg's Havard dorm room, Facebook HQ has passed through a number of short-lived locations. Rapid growth led to years of hopping from one office to another; however, the roots are only getting deeper in their current location – and it's not hard to see why.\n\n\nFacebook's campus sits in a not so little corner of Palo Alto, and the entirety of its construction has been built around the wellbeing of the people that make the company tick, the employees. \n\nStepping away from canning workers into grey cubicles like sardines, Facebook's HQ follows an open plan, natural light-filled, home away from home approach that encourages creativity, collaboration, and good vibes only.\n\nClose to the banks of San Francisco Bay, facebook's Menlo park or 'MPK' campus sprawls across hundreds of acres and is split into 3, soon to be 4 sections.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/f1fbuOkxugs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/f1fbuOkxugs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/f1fbuOkxugs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/f1fbuOkxugs/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/f1fbuOkxugs/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Tech Vision",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-09-25T21:07:14Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "g2xxWwQkWleCrTant7xQxbI9g7M",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "jB2Z9PA7iKI"
+      },
+      "snippet": {
+        "publishedAt": "2019-01-15T11:03:25Z",
+        "channelId": "UCk0LtHycs4deT5bkRqrPw2A",
+        "title": "Dubai. Luxury life tour. Big Episode.",
+        "description": "This Big Episode is dedicated to Dubai and a luxury side of it's life - private islands, villas for 200000000$ and other rich things.\nWe also will tell you about new and interesting things launched in this city for the last couple of years and of course some exclusive stories\n\nShot with this drone https://amzn.to/2RMdDG3\n\nMusic:\nBlue Wednesday: https://bluewednesday.bandcamp.com\nGuggenz: http://guggenz.bandcamp.com\nDavid Cutter: http://davidcuttermusic.com\nDJ Quads: https://soundcloud.com/aka-dj-quads\nJoakim Karud: https://soundcloud.com/joakimkarud\nBonus Points: https://soundcloud.com/bonuspoints\n\nContents :\n\n0:17 - Dubai today\n2:10 - Dubai in the past\n4:08 - THE MOST things that are already in Dubai\n6:18 - THE MOST thing that will soon be in Dubai\n7:31 - Expensive cars.\n9:27 - Expensive hotels.\n10:41 - The Palm Island\n12:05 - Dubai's luxury estate. Private islands and villas on the World archipelago.\n13:57 - Underwater room in a floating villa.\n15:48 - \"Sweden\" island and villa for 20000000$\n18:40 - Burj Khalifa\n21:38 - Night Dubai and fountain shows.\n23:33 - The best terrace with a night view of Dubai.\n25:57 - How rich people have fun in Dubai. Polo resort.\n27:35 - Lakes in the desert and sunset over the dunes\n29:00 - Dubai touristic. What's new in Dubai (Dubai Frame, Xline, Alsef, Lamar Beach, Dubai Marina)\n32:27 - My  Feedback.\n\n#dubai #UAE #bigepisode",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/jB2Z9PA7iKI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/jB2Z9PA7iKI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/jB2Z9PA7iKI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/jB2Z9PA7iKI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/jB2Z9PA7iKI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Anton somewhere",
+        "liveBroadcastContent": "none",
+        "publishTime": "2019-01-15T11:03:25Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "8AomTgX2eeHka-ttegNyMDFAREc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "N8YyKVzZu0E"
+      },
+      "snippet": {
+        "publishedAt": "2020-07-29T21:54:14Z",
+        "channelId": "UCz6zHjmjqCH0Tr_DGvdjbaQ",
+        "title": "The World's Highest Paid CEO's",
+        "description": "Here's the 10 Highest Paid CEO's in the world! \n\nFacebook: https://www.facebook.com/MrLuxuryBrand\nReddit: https://www.reddit.com/r/MrLuxury\nTwitter: https://twitter.com/MrLuxuryBrand\nInstagram: https://www.instagram.com/MrLuxuryBrand\n\nFor copyright matters relating to this channel, please contact me directly at : contactmrluxury@gmail.com\n\nThe World's Highest Paid CEO's",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/N8YyKVzZu0E/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/N8YyKVzZu0E/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/N8YyKVzZu0E/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/N8YyKVzZu0E/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/N8YyKVzZu0E/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Mr. Luxury",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-07-29T21:54:14Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "g4fP122Pi-IrW5Ku11H-JaCM3tU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "S1zb1kgDvRo"
+      },
+      "snippet": {
+        "publishedAt": "2019-10-28T22:17:35Z",
+        "channelId": "UCaLfMkkHhSA_LaCta0BzyhQ",
+        "title": "20,000 Meals a Day At Google - A Frank Experience",
+        "description": "Frank Pinello visits Google's headquarters in NYC to see how one of the world’s top tech companies feeds its employees. Googlers in New York have a variety of food options. From Mexican food to sushi to butternut squash spaghetti, the choices are endless. In this episode of A Frank Experience, Frank learns about how choice architecture-backed layouts influence employees' food choices, tries his hand at rolling sushi, and talks to some of the world’s most-well fed employees.\n\nSubscribe to Munchies here: http://bit.ly/Subscribe-to-MUNCHIES\n\nAll Munchies videos release a full week early on our site: https://video.vice.com/en_us/channel/munchies\n\nHungry? Sign up here for the MUNCHIES Recipes newsletter.\nhttps://www.vice.com/en_us/page/sign-up-for-munchies-recipes-newsletter\n\nCheck out http://munchies.tv for more!\n\nFollow Munchies here:\nFacebook: http://facebook.com/munchies\nTwitter: http://twitter.com/munchies\nTumblr: http://munchies.tumblr.com\nInstagram: http://instagram.com/munchies\nPinterest: https://www.pinterest.com/munchies\nFoursquare: https://foursquare.com/munchies\nMore videos from the VICE network: https://www.fb.com/vicevideo",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/S1zb1kgDvRo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/S1zb1kgDvRo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/S1zb1kgDvRo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/S1zb1kgDvRo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/S1zb1kgDvRo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Munchies",
+        "liveBroadcastContent": "none",
+        "publishTime": "2019-10-28T22:17:35Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "lcIfZHq2TSNZQCY-nAvGGlocwbQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "xyoldCQCHlo"
+      },
+      "snippet": {
+        "publishedAt": "2019-06-19T16:25:32Z",
+        "channelId": "UCo7a6riBFJ3tkeHjvkXPn1g",
+        "title": "Inside Samsung’s global headquarters in South Korea | CNBC Reports",
+        "description": "You may know Samsung for its smartphones and household appliances, but how about its insurance arm or holiday resorts? CNBC’s Uptin Saiidi gets a rare look inside the headquarters of one of the world’s largest companies. \n\n-----\n\nSubscribe to us on YouTube: http://cnb.cx/2wuoARM\n\nSubscribe to CNBC Life on YouTube: http://cnb.cx/2wAkfMv\n\nLike our Facebook page:\nhttps://www.facebook.com/cnbcinternational\n\nFollow us on Instagram:\nhttps://www.instagram.com/cnbcinternational/\n\nFollow us on Twitter:\nhttps://twitter.com/CNBCi\n\n#CNBC #Samsung #Tech",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/xyoldCQCHlo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/xyoldCQCHlo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/xyoldCQCHlo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/xyoldCQCHlo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/xyoldCQCHlo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "CNBC International",
+        "liveBroadcastContent": "none",
+        "publishTime": "2019-06-19T16:25:32Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "nLTvpkfZkrW-QNd6v-5V15YdSd8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "RNVh_HMX2IY"
+      },
+      "snippet": {
+        "publishedAt": "2020-05-21T18:26:51Z",
+        "channelId": "UC54w2TX_xUNPQ0d-3VvbsHQ",
+        "title": "The World in 2050",
+        "description": "The world in 2050 is a future filled with amazing technology. By 2050, artificial intelligence and virtual reality will be ubiquitous. Quantum computing and advanced prosthetics will rise. We will move around the world with Hyperloop technology, evtols, electric cars, self driving vehicles, and electric/supersonic airplanes. Our packages will be delivered by drones and our power will come from renewable energy. There will be a permanent base on the Moon, humans on Mars, and space hotels in orbit. While our food consumption transforms, vertical farming and biotechnology will rise. Stem cells and CRISPR technologies will regenerate injuries and cure diseases. Lastly, we will battle climate change by removing carbon directly from the atmosphere. The future is exciting!\n\nThank you to the following media sources!\n\nIf you enjoy Futurology, please consider supporting the channel on Patreon!\nhttps://www.patreon.com/futurology_\n\n\nMusic\nTrue Messiah - DJ Freedem - YouTube Audio Library\nCutting it Close - DJ Freedem - YouTube Audio Library\nThe High Line - Causmic - YouTube Audio Library\nFlight to Tunisia - Causmic - YouTube Audio Library\nStranger in the Way - RAGE - YouTube Audio Library\nMade in Sydney - Peyruis - Audio Library\nDude - Patrick Patrikios - YouTube Audio Library\nLockdown - Poid & Baribal - Audio Library\n\n\nVideo \nFrameCommunication\nhttps://www.youtube.com/watch?v=62l46Hg2WxM\nSpaceX\nhttps://www.youtube.com/watch?v=zqE-ultsWt0\nArchDaily\nhttps://www.youtube.com/watch?v=nHr0KAKA5Qw\nenrigue8\nhttps://www.youtube.com/watch?v=ABrjdyavqkI\namazon\nhttps://www.youtube.com/watch?v=NrmMk1Myrxc\nWalmart\nhttps://www.youtube.com/watch?v=7TvRcGfPe-g\nBoston Dynamics\nhttps://www.youtube.com/watch?v=fRj34o4hN4I\nThe Verge\nhttps://www.youtube.com/watch?v=kJoAcEI2PXQ\nTilburg University\nhttps://www.youtube.com/watch?v=vlmjvKgWtmU&t=82s\nTech Insider\nhttps://www.youtube.com/watch?v=SQjXaTlGHIY\nMovieclips Trailers\nhttps://www.youtube.com/watch?v=l6bmTNadhJE\nMade by Google\nhttps://www.youtube.com/watch?v=I6r4y17bV8g\nWonder World\nhttps://www.youtube.com/watch?v=OmYTQnZx0KY&t=56s\nGuy Costello\nhttps://www.youtube.com/watch?v=UlZtr9fjQcU\nTRT World\nhttps://www.youtube.com/watch?v=vUUgN5jv1l4\nWestern Digital Corporation\nhttps://www.youtube.com/watch?v=BUqEhTFqnyc\nCNBC\nhttps://www.youtube.com/watch?v=u1XXjWr5frE\nBloomberg\nhttps://www.youtube.com/watch?v=sk1NkWl_W2Y\nSoasmedia\nhttps://www.youtube.com/watch?v=RmsoHyMRtbg\nSeeker\nhttps://www.youtube.com/watch?v=luHmXHEpF7w\nWIRED\nhttps://www.youtube.com/watch?v=LZPZFeOOerA\nWarner Bros. Pictures\nhttps://www.youtube.com/watch?v=cSp1dM2Vj48\nForbes\nhttps://www.youtube.com/watch?v=cohby-wXvk0&feature=emb_logo\nVirtuix Omni\nhttps://www.youtube.com/watch?v=1SlZvuhABGk\nTesla\nhttps://www.youtube.com/watch?v=tlThdr3O5Qo\nWaymo\nhttps://www.youtube.com/watch?v=kDv3dvBEkwk\nAlpha SQUAD Official\nhttps://www.youtube.com/watch?v=U7jaWDMf9t4\nVolvo Trucks\nhttps://www.youtube.com/watch?time_continue=2&v=2Gc1zz5bl8I&feature=emb_logo\nEricAdams321\nhttps://www.youtube.com/watch?v=GBcLIr-pc4k\nUber Elevate\nhttps://www.uber.com/us/en/elevate/vision/\nThe Boring Company\nhttps://www.youtube.com/watch?v=u5V_VzRrSBI\nOwen Derrick\nhttps://www.youtube.com/watch?v=Czrc1JfIBRw\nDelft Hyperloop\nhttps://www.youtube.com/watch?v=jTPH6CUcXT0\nVirgin Hyperloop One\nhttps://hyperloop-one.com/our-story#advisory-team\nOn Demand News\nhttps://www.youtube.com/watch?v=NsKVC6EUWyk\nMichael Eckhardt\nhttps://www.youtube.com/watch?v=WYeSED8JjWs\nCNBC\nhttps://www.youtube.com/watch?v=EoTVtB-cSps\\\nFUSION FOR ENERGY\nhttps://www.youtube.com/watch?v=NfWKvAVLFM8\nNASA\nhttps://www.nasa.gov/specials/artemis/\nEuropean Space Agency, ESA\nhttps://www.youtube.com/watch?v=E-lq2ErdlXY\nDEEP SPACE TV\nhttps://www.youtube.com/watch?v=6ExPQ7dHehk\nHazegrayart\nhttps://www.youtube.com/watch?v=9SCvenRvUVs",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/RNVh_HMX2IY/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/RNVh_HMX2IY/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/RNVh_HMX2IY/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/RNVh_HMX2IY/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          }
+        },
+        "channelTitle": "Futurology",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-05-21T18:26:51Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "b-dXazGuFjjwDOGtRsE1xJdVWuU",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "_Tyx3u8hzCo"
+      },
+      "snippet": {
+        "publishedAt": "2020-05-15T22:25:48Z",
+        "channelId": "UCHAK6CyegY22Zj2GWrcaIxg",
+        "title": "10 Most Advanced Homes In The World",
+        "description": "With everything from mobiles phones, to sports cars getting smarter year on year, it comes at no surprise that our homes are starting to get a tech make-over.  \n\nWe are looking at the top 10 most technologically advanced houses available on the market.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/_Tyx3u8hzCo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/_Tyx3u8hzCo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/_Tyx3u8hzCo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/_Tyx3u8hzCo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/_Tyx3u8hzCo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Tech Vision",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-05-15T22:25:48Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "JN-iLIn4FP1LNoGLkiAtUfJwOx4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "9XkX6EGk_CA"
+      },
+      "snippet": {
+        "publishedAt": "2021-01-14T07:46:47Z",
+        "channelId": "UCHAK6CyegY22Zj2GWrcaIxg",
+        "title": "Inside Apple's iPhone Factory In China",
+        "description": "Last month it emerged that Apple, the most valuable company in the world and supposedly an icon of squeaky-clean progressive values, brushed aside allegations of labour within its key Chinese supply chain. \n\nThe suggestion is that a big Apple supplier named Suyin Electronics employed workers as young as 14, in the interests of keeping up with the ferocious appetite for Apple goods in the west. Apple chided Suyin, but maintained ties for months and even years afterwards. \n\nWith new allegations like this, and a spate of associated with the brand’s manufacturing base over the years, we thought it was time we put on our lanyards and take a peek inside an iPhone factory in China. \n\nInside An iPhone Factory in China",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/9XkX6EGk_CA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/9XkX6EGk_CA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/9XkX6EGk_CA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/9XkX6EGk_CA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/9XkX6EGk_CA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Tech Vision",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-01-14T07:46:47Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "ea7gP5CfB6MdgM7U3YG9Z2_dbxk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Skp7iaLfsD4"
+      },
+      "snippet": {
+        "publishedAt": "2016-11-25T12:58:10Z",
+        "channelId": "UCtmqE6KnY_ESbQA8u5Z4NWg",
+        "title": "Google Singapore office tour | Tiravan",
+        "description": "A video tour of Google's new office in Singapore.\n\n\nDont't forget to subscribe, like and give a comment :)\n\nInstagram: https://www.instagram.com/tiravanv/?hl=en\n\nCredits: \nProduction, Director, Video - Clarence Choi\nMusic: Morning Sun - Nicolai Heidlas, Pacific Sun - Nicolai Heidlas",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Skp7iaLfsD4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Skp7iaLfsD4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Skp7iaLfsD4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Skp7iaLfsD4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Skp7iaLfsD4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Tirierie",
+        "liveBroadcastContent": "none",
+        "publishTime": "2016-11-25T12:58:10Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Mjmh6IRzDOBheFozEjyQ5CV5_FQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "IM26945994c"
+      },
+      "snippet": {
+        "publishedAt": "2018-05-13T06:41:30Z",
+        "channelId": "UCXsXitjiT_8qPgNEFGPVfBA",
+        "title": "Googleplex Full Tour - The Secrets of Google HQ🔥🔥🔥",
+        "description": "Namaskaar Dosto, is video mein maine aapse share kiya hai experience Googleplex ke tour ka, Google ka Headquarter jo Mountain View, California mein hai jiske Googleplex kehte hai woh maine aapko is video mein dikhaya hai aur ek vlog style mein uska tour diya hai. Maine Google plex ko Google I/O 2018 ke saath visit kiya aur yeh tour kaafi kamaal raha. Mujhe umeed hai ki aapko Google Office Tour ki yeh video pasand aayegi. \n\nShare, Support, Subscribe!!!\nAndroid App: https://technicalguruji.in/app\nYoutube: http://www.youtube.com/c/TechnicalGuruji \nTwitter:  http://www.twitter.com/technicalguruji\nFacebook: http://www.facebook.com/technicalguruji\nInstagram: http://instagram.com/technicalguruji\nGoogle Plus: https://plus.google.com/+TechnicalGuruji\nWebsite: https://technicalguruji.in/\nMerchandise: http://shop.technicalguruji.in/\n\nSong: Cjbeards - Puzzle (Vlog No Copyright Music)\nMusic provided by Vlog No Copyright Music.\nVideo Link: https://youtu.be/ZFtFqzUB6yo\n\nAbout : Gaurav Chaudhary is a channel where I post interesting videos on LIFE Talks every week.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/IM26945994c/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/IM26945994c/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/IM26945994c/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/IM26945994c/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/IM26945994c/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Gaurav Chaudhary",
+        "liveBroadcastContent": "none",
+        "publishTime": "2018-05-13T06:41:30Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "okP9ozzZi9q8VzNM07fxE0rppqw",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "PG4b6wgsIQ4"
+      },
+      "snippet": {
+        "publishedAt": "2020-08-13T17:08:27Z",
+        "channelId": "UCdxi8d8qRsRyUi2ERYjYb-w",
+        "title": "Where Do Billionaires Keep Their Money?",
+        "description": "Subscribe for more amazing videos! ► http://bit.ly/Subscribe-to-Richest ◄\n\nIf the average full-time worker who makes $50k a year worked 40 hours a week for two million years, they’d still not be as rich as Jeff Bezos. \n\nThe sheer volume of money flowing into billionaire bank accounts is astronomical. But it’s not as simple as stashing wads of hundred-dollar-bills under the bed. The reality is that, unless these billionaires operate tactically, their wealth will sizzle as inflation grows over time. Rather than a swimming pool full of gold, the world’s richest diversify amongst stocks, trusts, real estate, business ventures, and, of course, a little over-the-top splurging now and then.  \nkeep your jealousy in check as we decipher how the financial elite hold, spend, and maximise their money.\n\n\nFor copyright matters please contact us at: legal@valnetinc.com",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/PG4b6wgsIQ4/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/PG4b6wgsIQ4/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/PG4b6wgsIQ4/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/PG4b6wgsIQ4/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/PG4b6wgsIQ4/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "TheRichest",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-08-13T17:08:27Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "VbxpoqfgA4fhe7FbKs1nxgbf90I",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "kd33UVZhnAA"
+      },
+      "snippet": {
+        "publishedAt": "2020-06-11T22:12:19Z",
+        "channelId": "UCJS9pqu9BzkAMNTmzNMNhvg",
+        "title": "Google Data Center Security: 6 Layers Deep",
+        "description": "Security is one of the most critical elements of our data centers’ DNA. With dozens of data centers globally, security operations means managing a massively complex network. Follow Stephanie Wong, as she journeys to the core of a data center, to show you the six layers of physical security designed to thwart unauthorized access. She’ll meet experts along the way to explore the inner workings of the technology and systems that make Google Cloud one of the most robust enterprise risk management platforms. \n\nData Centers (Data & Security) → https://goo.gle/2LmkzF3 \nGoogle Cloud (Trust & Security)→ http://goo.gle/38bAn8F \n\nFollow Stephanie on Twitter→ @swongful\nSubscribe to Google Cloud Platform → https://goo.gle/GCP \n\nProduct: Data Center; fullname: Stephanie Wong;",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/kd33UVZhnAA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/kd33UVZhnAA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/kd33UVZhnAA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/kd33UVZhnAA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/kd33UVZhnAA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Google Cloud Tech",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-06-11T22:12:19Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "pbGnU3mUG3sZbGweUINSfzUHjDQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "yIcEAEszg6Y"
+      },
+      "snippet": {
+        "publishedAt": "2020-12-22T17:55:58Z",
+        "channelId": "UCdxi8d8qRsRyUi2ERYjYb-w",
+        "title": "What Elon Musk Does With All His Money (Compilation)",
+        "description": "Subscribe for more amazing videos! ► http://bit.ly/Subscribe-to-Richest ◄ \n\nCompilation Original Videos:\n\nHow Elon Musk Spent $83 Billion Dollars: https://www.youtube.com/watch?v=RPSPAs0JS8E \n\nElon Musk's Electric Plane Has Competition: https://www.youtube.com/watch?v=ui1IzH1UCDA\n \nElon Musk Is Mining A Golden Asteroid Worth $700 Quintillion: https://www.youtube.com/watch?v=64TXV2Nre4Q \n\nElon Musk’s Neuralink Will Cost $20 Million: https://www.youtube.com/watch?v=IpbBXUR_HZw \n\nThe Elon Musk VS Jeff Bezos Rivalry Explained: https://www.youtube.com/watch?v=mUO06RFvP9U",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/yIcEAEszg6Y/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/yIcEAEszg6Y/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/yIcEAEszg6Y/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/yIcEAEszg6Y/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/yIcEAEszg6Y/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "TheRichest",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-12-22T17:55:58Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "5WPlvie3uPGwPLXQD-B7w65GGu8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "YZY7TNFfGBU"
+      },
+      "snippet": {
+        "publishedAt": "2019-09-29T11:18:35Z",
+        "channelId": "UCbkAklUqbCi69K8xQdbe48A",
+        "title": "Google Office එක ඇතුලට යමු | Google Singapore Tour",
+        "description": "This is Google Asia Pacific HQ and we got a chance to go inside and see how it is . Before few years ago , I saw some video clips about the Google office in USA . I saw very amazing and mind blowing things , which we cant see in a regular office . I thought those videos are fake . But , Now I saw it by my own eyes . Yes . It's is real . Google office is amazing . Lets see what is there .",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/YZY7TNFfGBU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/YZY7TNFfGBU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/YZY7TNFfGBU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/YZY7TNFfGBU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/YZY7TNFfGBU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "SL Geek",
+        "liveBroadcastContent": "none",
+        "publishTime": "2019-09-29T11:18:35Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "FmC_uX-TlAhZzr3d0ECR7AwCuo4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "IMPbKVb8y8s"
+      },
+      "snippet": {
+        "publishedAt": "2020-11-28T20:17:53Z",
+        "channelId": "UCHAK6CyegY22Zj2GWrcaIxg",
+        "title": "Inside Amazon's Smart Warehouse",
+        "description": "Amazon is the world’s biggest retailer, and its CEO Jeff Bezos the world’s richest man, for one very good reason. His company is better than anyone else, ever, at giving people what they want, quickly. \n\nAmazon acquired its undisputed status as heavyweight champion of the retail universe thanks largely to its lightning-fast delivery times. The astonishing feat of ferrying hundreds of millions of items, from guitar strings to saucepans to car parts, directly to your door, inside 24 hours, is nothing short of a modern logistical miracle. \n\nSo how does Amazon do it? A super-smart army of slave robots, for one. Ingenious, if occasionally unscrupulous, management practices are part of the answer too. And the modern-day voodoo of deep-learning AI – all of which are made flesh in the most advanced stockrooms the world has ever seen. So join us today, as we button up our hi-vis jacket and journey inside Amazon’s smart warehouses.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/IMPbKVb8y8s/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/IMPbKVb8y8s/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/IMPbKVb8y8s/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/IMPbKVb8y8s/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/IMPbKVb8y8s/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Tech Vision",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-11-28T20:17:53Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "rLaiwBpgYFnhwQqc3wxXRzSECXE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "pRuLtyIEBDA"
+      },
+      "snippet": {
+        "publishedAt": "2020-10-21T13:15:23Z",
+        "channelId": "UC49UjkMNNciC6bFjsBMqMaA",
+        "title": "Meet Apple's Newest Invention: The Apple Car",
+        "description": "Meet Apple's Newest Invention: The Apple Car or Apple's New Self Driving Car.\n\nWATCH NEXT:\nInside The $400 Million Lurssen Flying Fox SuperYacht - https://youtu.be/R4KODAEXO4U\n\nInside the $5 Billion Apple Park - The Spaceship - https://youtu.be/BirEuwHmVRE\n\nRELATED VIDEOS: \nInside The $5 Billion Apple Headquarters - https://youtu.be/FzcfZyEhOoI\nApple's Next Big Product: The Apple Glasses - https://youtu.be/gphzDRBl-Mo\nApple Event — October 13 - https://youtu.be/KR0g-1hnQPA\nThis is iPhone 12 Pro — Apple - https://youtu.be/cnXapYkboRQ\nApple iPhone 12 event in under 12 minutes - https://youtu.be/vpw_z9vBPAE\nMeet iPhone 12 — Apple - https://youtu.be/65JrtwtTOdc\nThe most powerful iPhone ever - https://youtu.be/2sXooi_y-MI\nApple iPhone 12 Lineup Reactions! - https://youtu.be/k1v7_zScivQ\n\nApple is one of the most appealing electronic brands in the world. They are known to put to the market mobile phones and computer accessories. Still, it seems Steve Job's founded company finally decided to venture into the already crowded automobile industry. The Apple electric car project codenamed 'Titan,' is expected to be one of the most technologically advanced cars ever made. Let's take you on a virtual ride aboard this autonomous car and the path to its creation. Hey, before we get into the video, be sure to enter our brand new giveaway, we’ll be giving away any of these items. To enter the giveaway, comment the secret keyword in the video, subscribe and turn on post notifications….Ooh and most importantly watch the whole video. It’s that simple!\n\nMeet Apple's Newest Invention: The Apple Car\nApple's New Self Driving Car.\n\nWelcome to Luxury Zone, On this Channel we share everything about Luxury and help you experience the billionaire lifestyle. We rank the most expensive things in the world and we have a look inside the lives of the wealthiest people on the planet.\n\nConsider subscribing for inspiration and luxury experiences!\nSubscribe -https://bit.ly/2zR6U6c",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/pRuLtyIEBDA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/pRuLtyIEBDA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/pRuLtyIEBDA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/pRuLtyIEBDA/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/pRuLtyIEBDA/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Luxury Zone",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-10-21T13:15:23Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "z5lvaaoigReGYyCXDe1n5wxGYCo",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "ivCbN12hf78"
+      },
+      "snippet": {
+        "publishedAt": "2018-02-25T23:44:22Z",
+        "channelId": "UC4xKdmAXFh4ACyhpiQ_3qBw",
+        "title": "a day in the life of a Google software engineer",
+        "description": "Join me in the day of a life of an engineer at Google HQ (googleplex) in Mountain View.  I share some of the sights & sounds of working in tech!  (Please note, this is an individual channel, and any opinions don't necessarily reflect that of the company YouTube or Google).\n\nI wonder if some students might be thinking that software engineers live boring & lonely lives, staring at the computer all day in a cave... well, that's... not quite true!  hope this video can show some of the funner side of being a software developer :) \n\nLet me know your questions and comments, I'll be happy to answer them.\n\nTechLead: Season 1 is available here https://www.techseries.dev/season1.  Season 1 is a collection of some of my very first videos, which are currently unavailable anywhere else.\n\nJoin ex-Google/ex-Facebook engineers for my coding interview training: https://techinterviewpro.com/\n💻 100+ Videos of programming interview problems explained: https://coderpro.com/\n💻 Sign up for my FREE daily coding interview practice: http://dailyinterviewpro.com/\n\n📷 Learn how I built a $1,000,000+ business on YouTube: http://youtubebackstage.com/\n💵 [LIMITED TIME] Get 2 FREE Stocks on WeBull (Deposit $100 and get 2 stocks valued up to $1850): https://act.webull.com/k/S4oOH2yGOtHk/main\n🛒 My computer/camera gear: http://amazon.com/shop/techlead\n\n🎉 Party up:\nhttps://instagram.com/techleadhd/\nhttps://twitter.com/techleadhd/\nhttps://www.linkedin.com/in/techleadhd/\nhttps://discord.gg/pFUBUtE\n\nDisclosure: Some links are affiliate links to products. I may receive a small commission for purchases made through these links. #techlead",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/ivCbN12hf78/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/ivCbN12hf78/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/ivCbN12hf78/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/ivCbN12hf78/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/ivCbN12hf78/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "TechLead",
+        "liveBroadcastContent": "none",
+        "publishTime": "2018-02-25T23:44:22Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "hXpANzyVz5Jm401zi77JOh9aRx8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "4-k3R6BQjjU"
+      },
+      "snippet": {
+        "publishedAt": "2018-10-11T18:37:30Z",
+        "channelId": "UC6n8I1UDTKP1IWjQMg6_TwA",
+        "title": "The Town That Facebook Built",
+        "description": "How Facebook's headquarters went from a Harvard dorm room to a vast campus. For more by The B1M subscribe now - http://ow.ly/GxW7y \n\nRead the full story on this video, including images and useful links, here: http://www.theb1m.com/video/the-town-that-facebook-built \n\nLike The B1M on Facebook - http://www.facebook.com/TheB1M\n\nImages courtesy of Facebook, Level 10 Construction, Gehry Partners, Statista, The Harvard Crimson, Cool Caesar, Michael Pechuk, Noah Berger, Jitze Couperus, Fred Mills, Google Earth, CMG Landscape Architecture, MG McRath, City of Menlo Park, OMA and IMF/Kleiner Perkins Caufield and Byers Internet Trends Report 2018.\n\nView this video and more at https://www.TheB1M.com\nFollow us on Twitter - http://www.twitter.com/TheB1M\nFollow us on LinkedIn - https://www.linkedin.com/company/the-b1m-ltd\nB1M pictures on - http://instagram.com/theb1m/\n\n#construction #architecture #Facebook\n\nWe welcome you sharing our content to inspire others, but please be nice and play by our rules: http://www.theb1m.com/guidelines-for-sharing\n\nOur content may only be embedded onto third party websites by arrangement. We have established partnerships with domains to share our content and help it reach a wider audience. If you are interested in partnering with us please contact Enquiries@TheB1M.com.\n\nRipping and/or editing this video is illegal and will result in legal action. \n\n© 2018 The B1M Limited",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/4-k3R6BQjjU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/4-k3R6BQjjU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/4-k3R6BQjjU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/4-k3R6BQjjU/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/4-k3R6BQjjU/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "The B1M",
+        "liveBroadcastContent": "none",
+        "publishTime": "2018-10-11T18:37:30Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "jN1LTsgWeF6ykWP_kwwBZfkNtmc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "pkw87KDIG00"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "SrrBgKnSS0PAcwir14o8T6xNb2c",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "r44RKWyfcFw"
+      },
+      "snippet": {
+        "publishedAt": "2015-06-03T19:29:07Z",
+        "channelId": "UCQzHhoWHxmRS07TFx2D7lpQ",
+        "title": "Welcome to Silicon Valley",
+        "description": "We want to bring you behind the scenes, show you what really happens in Silicon Valley’s backstage and give you the insider perspective on how it feels to start a company here. Welcome to Silicon Valley! More info here: http://bit.ly/w2sv\n\nPlease help us sharing this documentary: send your friends to http://www.welcometosiliconvalley.com\n\n---\n\nBrought to you by Ympact\n\nYmpact is a non-profit organization created to inspire young people to make a positive and lasting impact on our global society through entrepreneurial action.\n \nLearn more on www.ympact.org",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/r44RKWyfcFw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/r44RKWyfcFw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/r44RKWyfcFw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/r44RKWyfcFw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/r44RKWyfcFw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Ympact - Global Startups, Entrepreneurs, and Changemakers",
+        "liveBroadcastContent": "none",
+        "publishTime": "2015-06-03T19:29:07Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "6iIS2wx3ADSwvmbxAxpaO51no-4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "FzcfZyEhOoI"
+      },
+      "snippet": {
+        "publishedAt": "2020-09-12T20:24:16Z",
+        "channelId": "UCHAK6CyegY22Zj2GWrcaIxg",
+        "title": "Inside The $5 Billion Apple Headquarters",
+        "description": "What looks like a giant spaceship parked in the lush flats of Cupertino, California, is actually tech giant Apple's new HQ. Fittingly named the Apple Park, this stunning architecture sprawls across 176 acres of land and might just be one of the most stunning campuses in the world. \n  \nDespite its incredibly futuristic looks, the apple park has been a long time in the making, with Steve Jobs first announcing the project way back in 2006. \n\nIt took 8 long years of planning, proposals, and permit applications, but by 2014 construction was well underway – and by 2017, the vast apple workforce was already starting to move in. \n\nThe massive ring-shaped building is now an iconic symbol of the Apple brand and is a fantastic testament to the company's dedication to effortless design, sustainability, and the future of technology.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/FzcfZyEhOoI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/FzcfZyEhOoI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/FzcfZyEhOoI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/FzcfZyEhOoI/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/FzcfZyEhOoI/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Tech Vision",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-09-12T20:24:16Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "tH0DuVl3fJE4VTj0uax6rpJ9O8U",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "LmfvUiJ6tB8"
+      },
+      "snippet": {
+        "publishedAt": "2021-01-09T19:46:58Z",
+        "channelId": "UCHAK6CyegY22Zj2GWrcaIxg",
+        "title": "Why Microsoft Has Underwater Data Centers",
+        "description": "Eight million data centres around the world are processing our entire online lives thousands of times a second, but Microsoft may have just rewritten this growing industry, and it may be for the better.\n\nWith our reliance on cloud based services expected to be at an all time high in 2021 due to a huge shift online pushed forward by the ongoing pandemic, the need for the most energy and time efficient data centres is crucial moving forward. Microsoft has just reached the end of a two year stage two experiment, sinking our data to the ocean floor, and here’s why this is big news.\n\nOn 9 July 2020, the tech giant reeled up what it calls its ‘Northern Isles,’ a 12.2 metre long steel cylinder, from the seabed. The giant tube remained 117 feet below the surface for 2 whole years, gathering data which would later be analysed by engineers.\n\nThe company chose to locate this long term experiment 10 miles off the coast of Scotland in the Orkney Islands archipelago. Here, 100% of the energy comes from environmentally green sources such as wind and solar.\n\nWhy Microsoft Has Underwater Data Centers",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/LmfvUiJ6tB8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/LmfvUiJ6tB8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/LmfvUiJ6tB8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/LmfvUiJ6tB8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/LmfvUiJ6tB8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Tech Vision",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-01-09T19:46:58Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "0Hj6fr3k0QxAtkOEMPZ-xJAqsQo",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "EKpInJuP2lw"
+      },
+      "snippet": {
+        "publishedAt": "2021-01-24T23:02:12Z",
+        "channelId": "UCHAK6CyegY22Zj2GWrcaIxg",
+        "title": "How Big Is Google?",
+        "description": "No other tech firm in history has managed to infiltrate and influence daily life to the same insane extent as search giant Google. The Californian company’s impact on how we work, play, and settle drunken arguments is so well documented it more or less goes without saying.\n    \nWhat’s perhaps less well understood is just how vast the company has grown, since deciding it wasn’t satisfied simply being everybody’s omniscient online know-it-all. \n\nSo today we’re on the search for just what this modern-day behemoth actually does and asking the question – how big is Google?",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/EKpInJuP2lw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/EKpInJuP2lw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/EKpInJuP2lw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/EKpInJuP2lw/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/EKpInJuP2lw/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Tech Vision",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-01-24T23:02:12Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "70bMR9xh7a9Kz94yh9GayfvmS-Y",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "DPLme2kG70s"
+      },
+      "snippet": {
+        "publishedAt": "2020-09-30T17:35:06Z",
+        "channelId": "UCdxi8d8qRsRyUi2ERYjYb-w",
+        "title": "Inside Amazon's City Of The Future",
+        "description": "Jeff Bezos, founder & ceo of Amazon is now planning on building out their own city! Well, kind of - you see, they're technically making so many different Amazon products and services for their customers, that they're intertwining themselves in to every aspect of your life! Even your sidewalks will have bluetooth soon! \n\n\nSubscribe for more amazing videos! ► http://bit.ly/Subscribe-to-Richest ◄\n\n25 years ago, Jeff Bezos was hand-packing books on the floor of his Seattle garage. Today, he’s operating a global powerhouse worth more than $1.5 trillion. Tomorrow, Amazon is poised to be the framework of our entire civilization - in fact, we’re already halfway there.\n\nFrom Alexa to self-flying drones, colossal fulfillment centres, and its very own airline, Amazon’s collection of high-tech innovation continues to grow. But as more and more money is funneled into the company, and as thousands more of us become reliant on its services every single day, before we know it, we’ll be living in cities completely run by Amazon.\n\nWould we be better or worse off for the technological revolution? Let’s see what an Amazon-run world would look like, and then you can decide that for yourself. \n\nFor copyright matters please contact us at: legal@valnetinc.com",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/DPLme2kG70s/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/DPLme2kG70s/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/DPLme2kG70s/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/DPLme2kG70s/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/DPLme2kG70s/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "TheRichest",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-09-30T17:35:06Z"
+      }
+    }
+  ]
+}

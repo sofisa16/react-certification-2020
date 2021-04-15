@@ -4,7 +4,8 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-import styled from "styled-components";
+import styled from 'styled-components';
+import {NoStyleLink} from './../../styles/common';
 
 const CardRoot = styled(Card)`
   width: 345px;
@@ -19,29 +20,33 @@ interface MediaCardProps {
   title: string;
   thumbnails: string;
   description: string;
+  videoId: string;
 }
 
 function MediaCard(props: MediaCardProps): JSX.Element {
-  const { title, thumbnails, description } = props;
+  const {title, thumbnails, description, videoId} = props;
+  const link = `/${videoId}`;
 
   return (
-    <CardRoot>
-      <CardActionArea>
-        <CardMediaRoot
-          image={thumbnails}
-          title={title}
-          alt-text={title}
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            {title}
-          </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            {description}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </CardRoot>
+    <NoStyleLink to={link}>
+      <CardRoot>
+        <CardActionArea>
+          <CardMediaRoot
+            image={thumbnails}
+            title={title}
+            alt-text={title}
+          />
+          <CardContent>
+            <Typography gutterBottom variant='h5' component='h2'>
+              {title}
+            </Typography>
+            <Typography variant='body2' color='textSecondary' component='p'>
+              {description}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </CardRoot>
+    </NoStyleLink>
   );
 }
 

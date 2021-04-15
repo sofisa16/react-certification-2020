@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {useState, useContext} from 'react';
+import {useLocation, useHistory} from 'react-router-dom';
 import InputBase from '@material-ui/core/InputBase';
 import SearchIcon from '@material-ui/icons/Search';
-import styled from "styled-components";
+import styled from 'styled-components';
+import {SearchContext} from './../../../../contexts/SearchContext';
 
 const Search = styled.div`
   position: relative;
@@ -40,14 +42,36 @@ const ColorInput = styled(InputInput)`
 `;
 
 function SearchBox(): JSX.Element {
+  const {setSearch} = useContext(SearchContext);
+  const [localSearch, setLocalSearch] = useState<string>("");
+  const queryString = useLocation();
+  const history = useHistory();
+
+  function onChange(event: React.ChangeEvent<HTMLInputElement>): void {
+    setLocalSearch(event.target.value);
+  }
+
+  function onKeyPress(event: React.KeyboardEvent<HTMLDivElement>): void {
+    if (event.key === 'Enter') {
+      setSearch(localSearch);
+      //setLocalSearch("");
+      if(queryString.pathname !== '/') {
+        history.push('/');
+      }
+    }
+  }
+
   return (
     <Search>
       <SearchIconInput>
         <SearchIcon />
       </SearchIconInput>
       <ColorInput 
-        placeholder="Search…"
+        placeholder='Search…'
         inputProps={{ 'aria-label': 'search' }}
+        value={localSearch}
+        onChange={onChange}
+        onKeyPress={onKeyPress}
       />
     </Search>
   );
