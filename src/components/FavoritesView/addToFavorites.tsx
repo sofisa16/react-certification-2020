@@ -12,7 +12,7 @@ export interface Action {
 }
 
 export function reducer(state: FavoriteVideos, action: Action): FavoriteVideos {
-  const id = typeof(action.payload.id) === 'string' ? action.payload.id : action.payload.id && action.payload.id.videoId;
+  const id = typeof(action.payload.id) === 'string' ? action.payload.id : action?.payload?.id?.videoId;
   switch (action.type) {
     case 'add': {
       return {
