@@ -74,7 +74,7 @@ function VideoDetailsView(): JSX.Element {
 
   useEffect(
     () => {
-      async function getVideoFromYoutube(/*videoId: string*/): Promise<void> {
+      async function getVideoFromYoutube(videoId: string): Promise<void> {
         try {
           const response: Response = await getFromYouTubeAPI(`videos?part=contentDetails&part=id&part=player&part=snippet&part=statistics&id=${videoId}`);
           const result: YouTubeResponse = await response.json();
@@ -86,7 +86,7 @@ function VideoDetailsView(): JSX.Element {
         }
       }
 
-      async function getRelatedVideosFromYoutube(/*videoId: string*/): Promise<void> {
+      async function getRelatedVideosFromYoutube(videoId: string): Promise<void> {
         try {
           const response: Response = await getFromYouTubeAPI(`search?part=id&part=snippet&maxResults=25&relatedToVideoId=${videoId}&type=video`);
           const result: YouTubeResponse = await response.json();
@@ -98,8 +98,8 @@ function VideoDetailsView(): JSX.Element {
         }
       }
 
-      getVideoFromYoutube(/*videoId*/);
-      getRelatedVideosFromYoutube(/*videoId*/);
+      getVideoFromYoutube(videoId);
+      getRelatedVideosFromYoutube(videoId);
     },
     [videoId]
   );
