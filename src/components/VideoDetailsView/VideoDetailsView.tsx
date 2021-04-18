@@ -170,7 +170,7 @@ function VideoDetailsView(): JSX.Element {
         setButtonLabel('Agregar a favoritos');
       }
     },
-    [favoriteVideos]
+    [favoriteVideos, videoId, items]
   );
 
   return (

@@ -63,6 +63,13 @@ const GlobalContextProvider: React.FunctionComponent<GlobalContextProviderProps>
       [darkState]
     );
 
+    useEffect(
+      () => {
+        localStorage.setItem('favoriteVideos', JSON.stringify(favoriteVideos));
+      },
+      [favoriteVideos]
+    );
+
     const value: GlobalContextValues = {
       search,
       setSearch,
