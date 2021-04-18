@@ -1,4 +1,4 @@
-import {YouTubeResponse, YouTubeResponseItems} from './../../data-types/YoutubeAPI';
+import {YouTubeResponseItems} from './../../data-types/YoutubeAPI';
 
 export interface FavoriteVideos {
   [id: string]: YouTubeResponseItems;

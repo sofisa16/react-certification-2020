@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useContext} from 'react';
-import {YouTubeResponse, YouTubeResponseItems} from '../../data-types/YoutubeAPI';
+import {YouTubeResponseItems} from '../../data-types/YoutubeAPI';
 import {GlobalContext} from '../../contexts/GlobalContext';
 import Mosaic from '../Mosaic/Mosaic';
 
