@@ -21,18 +21,20 @@ function Mosaic(props: MosaicProps): JSX.Element {
   useEffect(
     () => {
       const cards: JSX.Element[] = [];
-      for(const item of items) {
-        const id = typeof(item.id) === 'string' ? item.id : item?.id?.videoId;
-        if(item.snippet) {
-          cards.push(
-            <Card
-              title={item.snippet.title}
-              thumbnails={item.snippet.thumbnails.high.url}
-              description={item.snippet.description}
-              videoId={`${id}`}
-              key={`${item.snippet.title}${item.snippet.publishedAt}`}
-            />
-          );
+      if (items) {
+        for(const item of items) {
+          const id = typeof(item.id) === 'string' ? item.id : item?.id?.videoId;
+          if(item.snippet) {
+            cards.push(
+              <Card
+                title={item.snippet.title}
+                thumbnails={item.snippet.thumbnails.high.url}
+                description={item.snippet.description}
+                videoId={`${id}`}
+                key={`${item.snippet.title}${item.snippet.publishedAt}`}
+              />
+            );
+          }
         }
       }
       setCards(cards);
