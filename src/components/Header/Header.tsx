@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useContext, useState} from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
@@ -8,6 +8,15 @@ import styled from 'styled-components';
 import SearchBox from './components/SearchBox/SearchBox';
 import Switch from '@material-ui/core/Switch';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Drawer from '@material-ui/core/Drawer';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import {GlobalContext} from './../../contexts/GlobalContext';
+import HomeIcon from '@material-ui/icons/Home';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import {useHistory} from 'react-router-dom';
 
 const MenuMargin = styled.div`
   margin-right: 16px;
@@ -28,17 +37,60 @@ const ToolbarGrid = styled(Toolbar)`
   grid-template-columns: auto auto 1fr;
 `;
 
+interface StyledAppBarProps {
+  darkState: boolean;
+}
+
+const StyledAppBar = styled(AppBar)<StyledAppBarProps>`
+  ${({ theme, darkState }) => `
+    background-color: ${darkState ? '#1C5476' : theme.palette.primary.main}
+  `}
+`;
+
+const StyledListItemIcon = styled(ListItemIcon)`
+  min-width: 24px;
+  padding-right: 12px;
+`;
+
+const StyledList = styled(List)`
+  width: 250px;
+`;
+
 function Header(): JSX.Element {
-  const [darkTheme, setDarkTheme] = useState<boolean>(false);
+  const { darkState, setDarkState } = useContext(GlobalContext);
+  const [openDrawer, setOpenDrawer] = useState<boolean>(false);
+  const history = useHistory();
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     event.preventDefault();
-    setDarkTheme(event.target.checked);
+    setDarkState(event.target.checked);
   };
+
+  function onClick(): void {
+    setOpenDrawer(false);
+    history.push('/');
+  }
+
+  function onClickFav(): void {
+    setOpenDrawer(false);
+    history.push('/favorites');
+  }
 
   return (
     <div>
-      <AppBar position='static'>
+      <Drawer anchor='left' open={openDrawer} onClose={() => { setOpenDrawer(false); }}>
+        <StyledList>
+          <ListItem button key={'home'} onClick={onClick}>
+            <StyledListItemIcon><HomeIcon /></StyledListItemIcon>
+            <ListItemText primary={"Home"} />
+          </ListItem>
+          <ListItem button key={'favorite'} onClick={onClickFav}>
+            <StyledListItemIcon><FavoriteIcon /></StyledListItemIcon>
+            <ListItemText primary={"Favorites"} />
+          </ListItem>
+        </StyledList>
+      </Drawer>
+      <StyledAppBar position='static' darkState={darkState}>
         <ToolbarGrid>
           <MenuMargin>
             <IconButton
@@ -46,7 +98,7 @@ function Header(): JSX.Element {
               color='inherit'
               aria-label='open panel'
             >
-              <MenuIcon />
+              <MenuIcon onClick={() => { setOpenDrawer(true); }}/>
             </IconButton>
           </MenuMargin>
           <SearchBox />
@@ -54,7 +106,7 @@ function Header(): JSX.Element {
             <FormControlLabel
               control={
                 <Switch
-                  checked={darkTheme}
+                  checked={darkState}
                   onChange={handleChange}
                   name='darkTheme'
                   id='darkTheme'
@@ -72,7 +124,7 @@ function Header(): JSX.Element {
             </IconButton>
           </RightSide>
         </ToolbarGrid>
-      </AppBar>
+      </StyledAppBar>
     </div>
   );
 }

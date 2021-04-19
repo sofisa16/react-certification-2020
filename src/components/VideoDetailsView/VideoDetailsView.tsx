@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import {useParams} from 'react-router-dom';
 import styled from 'styled-components';
 import useYouTubeAPI from './../../hooks/useYouTubeAPI';
@@ -7,7 +7,9 @@ import {YouTubeResponse, YouTubeResponseItems} from './../../data-types/YoutubeA
 //import bug from './../../data/bug.json';
 //import related_videos from './../../data/related_videos.json';
 import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
 import RelatedVideo from './../RelatedVideo/RelatedVideo';
+import {GlobalContext} from '../../contexts/GlobalContext';
 
 interface VideoDetailsViewParams {
   videoId: string;
@@ -43,6 +45,8 @@ const DownContainer = styled.div`
 
 const TitleContainer = styled.div`
   padding-bottom: 15px;
+  display: grid;
+  grid-template-columns: 1fr auto;
 `;
 
 const JustifyText = styled(Typography)`
@@ -65,6 +69,8 @@ function VideoDetailsView(): JSX.Element {
   //const related: YouTubeResponse = bug;
   const [embedHtml, setEmbedHtml] = useState<string>('');
   const [relatedVideos, setRelatedVideos] = useState<JSX.Element[]>([]);
+  const {favoriteVideos, dispatchFav} = useContext(GlobalContext);
+  const [buttonLabel, setButtonLabel] = useState<string>('Agregar a favoritos');
 
   useEffect(
     () => {
@@ -100,7 +106,7 @@ function VideoDetailsView(): JSX.Element {
 
   useEffect(
     () => {
-      if(items && items[0] && items[0].player && items[0].player.embedHtml) {
+      if(items[0]?.player?.embedHtml) {
         setEmbedHtml(items[0].player.embedHtml);
       }
     },
@@ -111,7 +117,7 @@ function VideoDetailsView(): JSX.Element {
     () => {
       const related: JSX.Element[] = [];
       for(const item of relatedItems) {
-        const id = typeof(item.id) === 'string' ? item.id : item.id.videoId;
+        const id = typeof(item.id) === 'string' ? item.id : item?.id?.videoId;
         if(item.snippet) {
           related.push(
             <RelatedVideo
@@ -134,6 +140,39 @@ function VideoDetailsView(): JSX.Element {
     };
   }
 
+  function toogleAddFavorite(): void {
+    const id = typeof(items[0].id) === 'string' ? items[0].id : items[0]?.id?.videoId;
+    if (favoriteVideos[`${id}`] && Object.keys(favoriteVideos[`${id}`]).length !== 0) {
+      dispatchFav({
+        type: 'remove',
+        payload: items[0],
+      });
+    }
+    else {
+      dispatchFav({
+        type: 'add',
+        payload: items[0],
+      });
+    }
+  }
+
+  useEffect(
+    () => {
+      const id = items && items[0]
+        ? typeof(items[0].id) === 'string'
+          ? items[0].id
+          : items[0]?.id?.videoId
+        : undefined;
+      if (favoriteVideos[`${id}`] && Object.keys(favoriteVideos[`${id}`]).length !== 0) {
+        setButtonLabel('Remover de favoritos');
+      }
+      else {
+        setButtonLabel('Agregar a favoritos');
+      }
+    },
+    [favoriteVideos, videoId, items]
+  );
+
   return (
     <ParentContainer>
       <RightContainer>
@@ -141,11 +180,12 @@ function VideoDetailsView(): JSX.Element {
         <DownContainer>
           <TitleContainer>
             <Typography gutterBottom variant='h5' component='h2'>
-              {items && items[0] && items[0].snippet && items[0].snippet.title}
+              {items[0]?.snippet?.title}
             </Typography>
+            <Button onClick={toogleAddFavorite}>{buttonLabel}</Button>
           </TitleContainer>
           <JustifyText variant='body2' color='textSecondary'>
-            {items && items[0] && items[0].snippet && items[0].snippet.description}
+            {items[0]?.snippet?.description}
           </JustifyText>
         </DownContainer>
       </RightContainer>

@@ -9,6 +9,7 @@ import {NoStyleLink} from './../../styles/common';
 
 const CardRoot = styled(Card)`
   width: 345px;
+  height: 345px;
   margin: 10px;
 `;
 

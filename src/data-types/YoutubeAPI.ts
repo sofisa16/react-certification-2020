@@ -11,22 +11,22 @@ export interface YouTubeResponse {
 }
 
 export interface YouTubeResponseItems {
-  'kind': string;
-  'etag': string;
-  'id': string | {
+  'kind'?: string;
+  'etag'?: string;
+  'id'?: string | {
     'kind': string;
     'channelId'?: string;
     'videoId'?: string;
   },
   'snippet'?: YouTubeResponseItemSnippet;
   'contentDetails'?: {	
-    'duration': string;
-    'dimension': string;
-    'definition': string;
-    'caption': string;
-    'licensedContent': boolean;	
-    'contentRating': any;	
-    'projection': string;	
+    'duration'?: string;
+    'dimension'?: string;
+    'definition'?: string;
+    'caption'?: string;
+    'licensedContent'?: boolean;	
+    'contentRating'?: any;	
+    'projection'?: string;	
   },	
   'statistics'?: {	
     'viewCount': string;

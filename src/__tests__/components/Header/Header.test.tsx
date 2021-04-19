@@ -4,6 +4,8 @@ import Header from '../../../components/Header/Header';
 import { createMemoryHistory } from 'history';
 import { Router } from 'react-router-dom';
 import renderer from 'react-test-renderer';
+import {GlobalContextProvider} from './../../../contexts/GlobalContext';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 test('renders Dark mode text', () => {
   const history = createMemoryHistory();
@@ -11,9 +13,13 @@ test('renders Dark mode text', () => {
   history.push(route);
 
   render(
-    <Router history={history}>
-      <Header />
-    </Router>
+    <GlobalContextProvider>
+      <CssBaseline>
+        <Router history={history}>
+          <Header />
+        </Router>
+      </CssBaseline>
+    </GlobalContextProvider>
   );
   const text = screen.getByText(/Dark mode/i);
   expect(text).toBeInTheDocument();
@@ -25,9 +31,13 @@ test('toogle Dark mode', () => {
   history.push(route);
 
   const utils = render(
-    <Router history={history}>
-      <Header />
-    </Router>
+    <GlobalContextProvider>
+      <CssBaseline>
+        <Router history={history}>
+          <Header />
+        </Router>
+      </CssBaseline>
+    </GlobalContextProvider>
   );
   const input = utils.getByLabelText('Dark mode') as HTMLInputElement;
   fireEvent.change(input, { target: { checked: true } });
@@ -41,9 +51,13 @@ it('renders Header component', () => {
 
   const tree = renderer
     .create(
-      <Router history={history}>
-        <Header />
-      </Router>
+      <GlobalContextProvider>
+        <CssBaseline>
+          <Router history={history}>
+            <Header />
+          </Router>
+        </CssBaseline>
+      </GlobalContextProvider>
     )
     .toJSON();
   expect(tree).toMatchSnapshot();
