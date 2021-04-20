@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useContext} from 'react';
 import styled from 'styled-components';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
@@ -7,6 +7,10 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import TextField from '@material-ui/core/TextField';
+import loginApi, {User} from './../../data/login.api';
+import {GlobalContext} from '../../contexts/GlobalContext';
+import { AUTH_STORAGE_KEY, AUTH_AVATAR } from './../../utils/constants';
+import { storage } from './../../utils/storage';
 
 const TextFieldSize = styled(TextField)`
   width: 332px;
@@ -23,6 +27,40 @@ interface LoginProps {
 
 function Login(props: LoginProps): JSX.Element {
   const {open, setOpen} = props;
+  const [username, setUsername] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
+  const {setAuthenticated, setAvatar} = useContext(GlobalContext);
+
+  async function loginIn(username: string, password: string): Promise<void> {
+    try {
+      const user: User = await loginApi(username, password);
+      setAvatar(user.avatarUrl);
+      setAuthenticated(true);
+      storage.set(AUTH_STORAGE_KEY, true);
+      storage.set(AUTH_AVATAR, user.avatarUrl);
+    }
+    catch (error) {
+      console.log();
+    }
+  }
+
+  function onLoginClick(): void {
+    loginIn(username, password);
+  }
+
+  function onChange(event: React.ChangeEvent<HTMLInputElement>): void {
+    const {name, value} = event.target;
+    switch (name) {
+      case "username": {
+        setUsername(value);
+        break;
+      }
+      case "password": {
+        setPassword(value);
+        break;
+      }
+    }
+  }
 
   return (
     <Dialog
@@ -35,8 +73,20 @@ function Login(props: LoginProps): JSX.Element {
       <DialogContent>
         <DialogContentText id="alert-dialog-description">
           <Container>
-            <TextFieldSize id="username" label="Username" />
-            <TextFieldSize id="password" label="Password" />
+            <TextFieldSize
+              id="username"
+              name="username"
+              label="Username"
+              value={username}
+              onChange={onChange}
+            />
+            <TextFieldSize
+              id="password"
+              name="password"
+              label="Password"
+              value={password}
+              onChange={onChange}
+            />
           </Container>
         </DialogContentText>
       </DialogContent>
@@ -44,7 +94,7 @@ function Login(props: LoginProps): JSX.Element {
         <Button onClick={(): void => { setOpen(false); }} color="primary">
           Cancel
         </Button>
-        <Button color="primary" autoFocus>
+        <Button onClick={onLoginClick} color="primary" autoFocus>
           Login
         </Button>
       </DialogActions>

@@ -17,6 +17,8 @@ import {GlobalContext} from './../../contexts/GlobalContext';
 import HomeIcon from '@material-ui/icons/Home';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import {useHistory} from 'react-router-dom';
+import Login from './../Login/Login';
+import Avatar from '@material-ui/core/Avatar';
 
 const MenuMargin = styled.div`
   margin-right: 16px;
@@ -57,8 +59,9 @@ const StyledList = styled(List)`
 `;
 
 function Header(): JSX.Element {
-  const { darkState, setDarkState } = useContext(GlobalContext);
+  const { darkState, setDarkState, authenticated, avatar } = useContext(GlobalContext);
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
+  const [openLogin, setOpenLogin] = useState<boolean>(false);
   const history = useHistory();
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -84,10 +87,13 @@ function Header(): JSX.Element {
             <StyledListItemIcon><HomeIcon /></StyledListItemIcon>
             <ListItemText primary={"Home"} />
           </ListItem>
-          <ListItem button key={'favorite'} onClick={onClickFav}>
-            <StyledListItemIcon><FavoriteIcon /></StyledListItemIcon>
-            <ListItemText primary={"Favorites"} />
-          </ListItem>
+          {
+            authenticated &&
+            <ListItem button key={'favorite'} onClick={onClickFav}>
+              <StyledListItemIcon><FavoriteIcon /></StyledListItemIcon>
+              <ListItemText primary={"Favorites"} />
+            </ListItem>
+          }
         </StyledList>
       </Drawer>
       <StyledAppBar position='static' darkState={darkState}>
@@ -119,9 +125,16 @@ function Header(): JSX.Element {
               aria-label='account of current user'
               aria-haspopup='true'
               color='inherit'
+              onClick={(): void => { setOpenLogin(true); }}
             >
-              <AccountCircle />
+              {
+                authenticated
+                ? <Avatar alt={'avatar'} src={avatar} />
+                : <AccountCircle />
+              }
+              
             </IconButton>
+            <Login open={openLogin} setOpen={setOpenLogin} />
           </RightSide>
         </ToolbarGrid>
       </StyledAppBar>

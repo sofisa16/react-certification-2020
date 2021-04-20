@@ -7,6 +7,7 @@ import {GlobalContextProvider} from './contexts/GlobalContext';
 import Container from '@material-ui/core/Container';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import FavoritesView from './components/FavoritesView/FavoritesView';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 function App(): JSX.Element {
   return (
@@ -18,9 +19,9 @@ function App(): JSX.Element {
             <Route exact path='/'>
               <HomeView />
             </Route>
-            <Route exact path='/favorites'>
+            <PrivateRoute exact path='/favorites'>
               <FavoritesView />
-            </Route>
+            </PrivateRoute>
             <Route path='/:videoId'>
               <VideoDetailsView />
             </Route>

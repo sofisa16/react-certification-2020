@@ -7,6 +7,8 @@ import {
   Theme,
 } from '@material-ui/core/styles';
 import {initialState, reducer, FavoriteVideos, Action} from './../components/FavoritesView/addToFavorites';
+import {AUTH_STORAGE_KEY, AUTH_AVATAR} from './../utils/constants';
+import {storage} from './../utils/storage';
 
 interface GlobalContextValues {
   search: string;
@@ -16,6 +18,10 @@ interface GlobalContextValues {
   theme: Theme;
   favoriteVideos: FavoriteVideos;
   dispatchFav: React.Dispatch<Action>;
+  authenticated: boolean;
+  setAuthenticated: React.Dispatch<React.SetStateAction<boolean>>;
+  avatar: string;
+  setAvatar: React.Dispatch<React.SetStateAction<string>>;
 }
 
 interface GlobalContextProviderProps {
@@ -34,6 +40,10 @@ const GlobalContext = React.createContext<GlobalContextValues>({
   }),
   favoriteVideos: {},
   dispatchFav: () => { return; },
+  authenticated: false,
+  setAuthenticated: () => { return; },
+  avatar: '',
+  setAvatar: () => { return; },
 });
 
 const GlobalContextProvider: React.FunctionComponent<GlobalContextProviderProps> =
@@ -48,6 +58,16 @@ const GlobalContextProvider: React.FunctionComponent<GlobalContextProviderProps>
       })
     );
     const [favoriteVideos, dispatchFav] = useReducer(reducer, initialState);
+    const [authenticated, setAuthenticated] = useState<boolean>(false);
+    const [avatar, setAvatar] = useState<string>('');
+
+    useEffect(
+      () => {
+        setAuthenticated(Boolean(storage.get(AUTH_STORAGE_KEY)));
+        setAvatar(String(storage.get(AUTH_AVATAR)));
+      },
+      []
+    );
 
     useEffect(
       () => {
@@ -78,6 +98,10 @@ const GlobalContextProvider: React.FunctionComponent<GlobalContextProviderProps>
       theme,
       favoriteVideos,
       dispatchFav,
+      authenticated,
+      setAuthenticated,
+      avatar,
+      setAvatar,
     };
 
     return (
