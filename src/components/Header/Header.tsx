@@ -19,6 +19,10 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import {useHistory} from 'react-router-dom';
 import Login from './../Login/Login';
 import Avatar from '@material-ui/core/Avatar';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+import {AUTH_STORAGE_KEY} from './../../utils/constants';
+import {storage} from './../../utils/storage';
 
 const MenuMargin = styled.div`
   margin-right: 16px;
@@ -59,7 +63,7 @@ const StyledList = styled(List)`
 `;
 
 function Header(): JSX.Element {
-  const { darkState, setDarkState, authenticated, avatar } = useContext(GlobalContext);
+  const { darkState, setDarkState, authenticated, avatar, setAuthenticated } = useContext(GlobalContext);
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
   const [openLogin, setOpenLogin] = useState<boolean>(false);
   const history = useHistory();
@@ -77,6 +81,27 @@ function Header(): JSX.Element {
   function onClickFav(): void {
     setOpenDrawer(false);
     history.push('/favorites');
+  }
+
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  function doOpenLogin(): void {
+    setOpenLogin(true);
+    handleClose();
+  }
+
+  function logOut(): void {
+    setAuthenticated(false);
+    storage.set(AUTH_STORAGE_KEY, false);
+    handleClose();
   }
 
   return (
@@ -125,15 +150,27 @@ function Header(): JSX.Element {
               aria-label='account of current user'
               aria-haspopup='true'
               color='inherit'
-              onClick={(): void => { setOpenLogin(true); }}
+              onClick={handleClick}
             >
               {
                 authenticated
                 ? <Avatar alt={'avatar'} src={avatar} />
                 : <AccountCircle />
               }
-              
             </IconButton>
+            <Menu
+              id="login-menu"
+              anchorEl={anchorEl}
+              keepMounted
+              open={Boolean(anchorEl)}
+              onClose={handleClose}
+            >
+              {
+                authenticated
+                  ? <MenuItem onClick={logOut}>Log out</MenuItem>
+                  : <MenuItem onClick={doOpenLogin}>Log in</MenuItem>
+              }
+            </Menu>
             <Login open={openLogin} setOpen={setOpenLogin} />
           </RightSide>
         </ToolbarGrid>

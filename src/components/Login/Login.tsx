@@ -9,8 +9,9 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import TextField from '@material-ui/core/TextField';
 import loginApi, {User} from './../../data/login.api';
 import {GlobalContext} from '../../contexts/GlobalContext';
-import { AUTH_STORAGE_KEY, AUTH_AVATAR } from './../../utils/constants';
-import { storage } from './../../utils/storage';
+import {AUTH_STORAGE_KEY, AUTH_AVATAR} from './../../utils/constants';
+import {storage} from './../../utils/storage';
+import Alert from '@material-ui/lab/Alert';
 
 const TextFieldSize = styled(TextField)`
   width: 332px;
@@ -30,17 +31,20 @@ function Login(props: LoginProps): JSX.Element {
   const [username, setUsername] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const {setAuthenticated, setAvatar} = useContext(GlobalContext);
+  const [errorMessage, setErrorMessage] = useState<string>('');
 
   async function loginIn(username: string, password: string): Promise<void> {
     try {
+      setErrorMessage('');
       const user: User = await loginApi(username, password);
       setAvatar(user.avatarUrl);
       setAuthenticated(true);
       storage.set(AUTH_STORAGE_KEY, true);
       storage.set(AUTH_AVATAR, user.avatarUrl);
+      setOpen(false);
     }
     catch (error) {
-      console.log();
+      setErrorMessage(error.message);
     }
   }
 
@@ -73,6 +77,10 @@ function Login(props: LoginProps): JSX.Element {
       <DialogContent>
         <DialogContentText id="alert-dialog-description">
           <Container>
+            {
+              errorMessage &&
+              <Alert severity="error">{errorMessage}</Alert>
+            }
             <TextFieldSize
               id="username"
               name="username"
