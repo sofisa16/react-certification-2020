@@ -10,6 +10,9 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import RelatedVideo from './../RelatedVideo/RelatedVideo';
 import {GlobalContext} from '../../contexts/GlobalContext';
+import {useLocation} from 'react-router-dom';
+import { storage } from './../../utils/storage';
+import { FavoriteVideos } from './../FavoritesView/addToFavorites';
 
 interface VideoDetailsViewParams {
   videoId: string;
@@ -60,6 +63,10 @@ const Iframe = styled.div`
   }
 `;
 
+interface RouteStateType {
+  prevPath: string,
+}
+
 function VideoDetailsView(): JSX.Element {
   const {videoId} = useParams<VideoDetailsViewParams>();
   const {getFromYouTubeAPI} = useYouTubeAPI();
@@ -69,8 +76,9 @@ function VideoDetailsView(): JSX.Element {
   //const related: YouTubeResponse = bug;
   const [embedHtml, setEmbedHtml] = useState<string>('');
   const [relatedVideos, setRelatedVideos] = useState<JSX.Element[]>([]);
-  const {favoriteVideos, dispatchFav} = useContext(GlobalContext);
+  const {favoriteVideos, dispatchFav, authenticated} = useContext(GlobalContext);
   const [buttonLabel, setButtonLabel] = useState<string>('Agregar a favoritos');
+  const {state} = useLocation<RouteStateType>();
 
   useEffect(
     () => {
@@ -99,7 +107,17 @@ function VideoDetailsView(): JSX.Element {
       }
 
       getVideoFromYoutube(videoId);
-      getRelatedVideosFromYoutube(videoId);
+      if (state?.prevPath === '/favorites') {
+        const favoriteVideos: FavoriteVideos = storage.get('favoriteVideos');
+        const temp = [];
+        for(const key in favoriteVideos) {
+          temp.push(favoriteVideos[key]);
+        }
+        setRelatedItems(temp);
+      }
+      else {
+        getRelatedVideosFromYoutube(videoId);
+      }
     },
     [videoId]
   );
@@ -182,7 +200,10 @@ function VideoDetailsView(): JSX.Element {
             <Typography gutterBottom variant='h5' component='h2'>
               {items[0]?.snippet?.title}
             </Typography>
-            <Button onClick={toogleAddFavorite}>{buttonLabel}</Button>
+            {
+              authenticated &&
+              <Button onClick={toogleAddFavorite}>{buttonLabel}</Button>
+            }
           </TitleContainer>
           <JustifyText variant='body2' color='textSecondary'>
             {items[0]?.snippet?.description}
