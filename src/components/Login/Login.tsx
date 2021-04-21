@@ -94,6 +94,7 @@ function Login(props: LoginProps): JSX.Element {
               label="Password"
               value={password}
               onChange={onChange}
+              type="password"
             />
           </Container>
         </DialogContentText>
