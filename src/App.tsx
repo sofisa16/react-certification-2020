@@ -9,6 +9,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import FavoritesView from './components/FavoritesView/FavoritesView';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import FavoritesDetailsView from './components/FavoritesDetailsView/FavoritesDetailsView';
+import NotFound from './components/NotFound/NotFound';
 
 function App(): JSX.Element {
   return (
@@ -26,8 +27,11 @@ function App(): JSX.Element {
             <PrivateRoute exact path='/favorites/:videoId'>
               <FavoritesDetailsView />
             </PrivateRoute>
-            <Route path='/:videoId'>
+            <Route exact path='/:videoId'>
               <VideoDetailsView />
+            </Route>
+            <Route path="*">
+              <NotFound />
             </Route>
           </Switch>
         </Container>
