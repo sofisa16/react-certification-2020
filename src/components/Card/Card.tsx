@@ -1,4 +1,5 @@
 import React from 'react';
+import {useLocation} from 'react-router-dom';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
@@ -26,7 +27,10 @@ interface MediaCardProps {
 
 function MediaCard(props: MediaCardProps): JSX.Element {
   const {title, thumbnails, description, videoId} = props;
-  const link = `/${videoId}`;
+  const {pathname} = useLocation<Location>();
+  const link = pathname === '/favorites' 
+    ? `/favorites/${videoId}`
+    :`/${videoId}`;
 
   return (
     <NoStyleLink to={link}>
