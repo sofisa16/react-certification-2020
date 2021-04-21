@@ -1,22 +1,21 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import {YouTubeResponseItems} from '../../data-types/YoutubeAPI';
 import Mosaic from '../Mosaic/Mosaic';
-import { storage } from './../../utils/storage';
-import { FavoriteVideos } from './addToFavorites';
+import {GlobalContext} from '../../contexts/GlobalContext';
 
 function FavoritesView(): JSX.Element {
   const [items, setItems] = useState<YouTubeResponseItems[]>([]);
+  const {favoriteVideos} = useContext(GlobalContext);
 
   useEffect(
     () => {
-      const favoriteVideos: FavoriteVideos = storage.get('favoriteVideos');
       const temp = [];
       for(const key in favoriteVideos) {
         temp.push(favoriteVideos[key]);
       }
       setItems(temp);
     },
-    []
+    [favoriteVideos]
   );
 
   return (

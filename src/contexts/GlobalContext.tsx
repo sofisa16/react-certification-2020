@@ -7,7 +7,7 @@ import {
   Theme,
 } from '@material-ui/core/styles';
 import {initialState, reducer, FavoriteVideos, Action} from './../components/FavoritesView/addToFavorites';
-import {AUTH_STORAGE_KEY, AUTH_AVATAR} from './../utils/constants';
+import {AUTH_STORAGE_KEY, AUTH_AVATAR, FAVORITES_VIDEOS} from './../utils/constants';
 import {storage} from './../utils/storage';
 
 interface GlobalContextValues {
@@ -65,6 +65,10 @@ const GlobalContextProvider: React.FunctionComponent<GlobalContextProviderProps>
       () => {
         setAuthenticated(Boolean(storage.get(AUTH_STORAGE_KEY)));
         setAvatar(String(storage.get(AUTH_AVATAR)));
+        dispatchFav({
+          type: 'addAll',
+          all: JSON.parse(String(storage.get(FAVORITES_VIDEOS))),
+        });
       },
       []
     );
@@ -85,7 +89,7 @@ const GlobalContextProvider: React.FunctionComponent<GlobalContextProviderProps>
 
     useEffect(
       () => {
-        localStorage.setItem('favoriteVideos', JSON.stringify(favoriteVideos));
+        storage.set(FAVORITES_VIDEOS, JSON.stringify(favoriteVideos));
       },
       [favoriteVideos]
     );
