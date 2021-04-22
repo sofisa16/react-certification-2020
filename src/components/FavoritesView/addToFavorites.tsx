@@ -32,6 +32,9 @@ export function reducer(state: FavoriteVideos, action: Action): FavoriteVideos {
         ...action.all,
       };
     }
+    case 'removeAll': {
+      return {};
+    }
     default:
       throw new Error();
   }

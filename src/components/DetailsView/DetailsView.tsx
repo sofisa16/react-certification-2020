@@ -62,10 +62,11 @@ const Iframe = styled.div`
 
 interface DetailsViewProps {
   relatedItems: YouTubeResponseItems[],
+  path: string;
 }
 
 function DetailsView(props: DetailsViewProps): JSX.Element {
-  const {relatedItems} = props;
+  const {relatedItems, path} = props;
   const {videoId} = useParams<DetailsViewParams>();
   const {getFromYouTubeAPI} = useYouTubeAPI();
   const [items, setItems] = useState<YouTubeResponseItems[]>([]);
@@ -112,7 +113,7 @@ function DetailsView(props: DetailsViewProps): JSX.Element {
             <RelatedVideo
               title={item.snippet.title}
               thumbnails={item.snippet.thumbnails.default.url}
-              videoId={`${id}`}
+              videoId={`${path}${id}`}
               key={`${item.snippet.title}${item.snippet.publishedAt}`}
             />
           );

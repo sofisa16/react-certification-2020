@@ -34,7 +34,7 @@ function FavoritesDetailsView(): JSX.Element {
     <>
       {
         inFavorites
-          ? <DetailsView relatedItems={relatedItems} />
+          ? <DetailsView relatedItems={relatedItems} path='favorites/' />
           : <NotFound />
       }
     </>

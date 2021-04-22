@@ -21,7 +21,7 @@ import Login from './../Login/Login';
 import Avatar from '@material-ui/core/Avatar';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
-import {AUTH_STORAGE_KEY} from './../../utils/constants';
+import {AUTH_STORAGE_KEY, AUTH_AVATAR, FAVORITES_VIDEOS} from './../../utils/constants';
 import {storage} from './../../utils/storage';
 
 const MenuMargin = styled.div`
@@ -63,7 +63,7 @@ const StyledList = styled(List)`
 `;
 
 function Header(): JSX.Element {
-  const { darkState, setDarkState, authenticated, avatar, setAuthenticated } = useContext(GlobalContext);
+  const { darkState, setDarkState, authenticated, avatar, setAuthenticated, setAvatar, dispatchFav } = useContext(GlobalContext);
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
   const [openLogin, setOpenLogin] = useState<boolean>(false);
   const history = useHistory();
@@ -100,7 +100,13 @@ function Header(): JSX.Element {
 
   function logOut(): void {
     setAuthenticated(false);
+    setAvatar('');
+    dispatchFav({
+      type: 'removeAll',
+    });
     storage.set(AUTH_STORAGE_KEY, false);
+    storage.set(AUTH_AVATAR, '');
+    storage.set(FAVORITES_VIDEOS, {});
     handleClose();
   }
 

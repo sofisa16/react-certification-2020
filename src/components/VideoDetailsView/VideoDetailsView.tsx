@@ -29,7 +29,7 @@ function VideoDetailsView(): JSX.Element {
   );
 
   return (
-    <DetailsView relatedItems={relatedItems} />
+    <DetailsView relatedItems={relatedItems} path='' />
   );
 }
 
