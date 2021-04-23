@@ -72,6 +72,7 @@ function SearchBox(): JSX.Element {
         value={localSearch}
         onChange={onChange}
         onKeyPress={onKeyPress}
+        id={'search_box'}
       />
     </Search>
   );

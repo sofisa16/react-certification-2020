@@ -26,6 +26,7 @@ exports[`renders SearchBox component 1`] = `
     <input
       aria-label="search"
       className="MuiInputBase-input"
+      id="search_box"
       onAnimationStart={[Function]}
       onBlur={[Function]}
       onChange={[Function]}
