@@ -4,34 +4,47 @@ import SearchBox from '../../../../../components/Header/components/SearchBox/Sea
 import { createMemoryHistory } from 'history';
 import { Router } from 'react-router-dom';
 import renderer from 'react-test-renderer';
+import {GlobalContextProvider} from '../../../../../contexts/GlobalContext';
 
-test('renders SearchBox', () => {
-  const history = createMemoryHistory();
-  const route = '/';
-  history.push(route);
-
-  render(
-    <Router history={history}>
-      <SearchBox />
-    </Router>
+describe('Testing Testing component', () => {
+  beforeEach(
+    () => {
+      JSON.parse = jest.fn();
+    }
   );
 
-  const inputNode = screen.getByPlaceholderText('Search…');
-
-  expect(inputNode).toBeInTheDocument();
-});
-
-it('renders SearchBox component', () => {
-  const history = createMemoryHistory();
-  const route = '/';
-  history.push(route);
-
-  const tree = renderer
-    .create(
-      <Router history={history}>
-        <SearchBox />
-      </Router>
-    )
-    .toJSON();
-  expect(tree).toMatchSnapshot();
+  it('renders SearchBox', () => {
+    const history = createMemoryHistory();
+    const route = '/';
+    history.push(route);
+  
+    render(
+      <GlobalContextProvider>
+        <Router history={history}>
+          <SearchBox />
+        </Router>
+      </GlobalContextProvider>
+    );
+  
+    const inputNode = screen.getByPlaceholderText('Search…');
+  
+    expect(inputNode).toBeInTheDocument();
+  });
+  
+  it('renders SearchBox component', () => {
+    const history = createMemoryHistory();
+    const route = '/';
+    history.push(route);
+  
+    const tree = renderer
+      .create(
+        <GlobalContextProvider>
+          <Router history={history}>
+            <SearchBox />
+          </Router>
+        </GlobalContextProvider>
+      )
+      .toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });
