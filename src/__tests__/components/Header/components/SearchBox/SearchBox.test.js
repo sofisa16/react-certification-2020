@@ -1,7 +1,7 @@
 import React from 'react';
-import {render, screen, fireEvent} from '@testing-library/react';
-import SearchBox from './SearchBox';
-import {GlobalContextProvider} from './../../../../contexts/GlobalContext';
+import {render, screen} from '@testing-library/react';
+import SearchBox from '../../../../../components/Header/components/SearchBox/SearchBox';
+import {GlobalContextProvider} from '../../../../../contexts/GlobalContext';
 import { createMemoryHistory } from 'history';
 import { Router } from 'react-router-dom';
 
