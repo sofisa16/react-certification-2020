@@ -23,6 +23,11 @@ const FloatButton = styled.div<FloatButtonProps>`
   }
 `;
 
+const SizeButton = styled(Button)`
+  min-width: 36px !important;
+  width: 36px;
+`;
+
 interface FavoriteButtonProps {
   item: YouTubeResponseItems;
   isComplete: boolean;
@@ -71,7 +76,7 @@ function FavoriteButton(props: FavoriteButtonProps): JSX.Element {
       {
         authenticated &&
           <FloatButton isComplete={isComplete}>
-            <Button
+            <SizeButton
               onClick={toogleAddFavorite}
               title={isFav ? 'Remover de favoritos' : 'Agregar a favoritos'}
               variant={isComplete ? undefined : 'contained'}
@@ -85,7 +90,7 @@ function FavoriteButton(props: FavoriteButtonProps): JSX.Element {
                     ? 'Agregar a favoritos'
                     : <FavoriteBorder />
               }
-            </Button>
+            </SizeButton>
           </FloatButton>
       }
     </>

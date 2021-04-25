@@ -57,7 +57,7 @@ describe('Searchbar component', () => {
     expect(mockHistoryPush).toHaveBeenCalledWith('/');
   });
 
-  it('should handle the type, handle the svg click and redirect to "/"', () => {
+  /*it('should handle the type, handle the svg click and redirect to "/"', () => {
     render(<GlobalProvider>
       <Searchbar />
     </GlobalProvider>);
