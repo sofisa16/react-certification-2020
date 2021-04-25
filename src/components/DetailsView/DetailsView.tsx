@@ -136,7 +136,7 @@ function DetailsView(props: DetailsViewProps): JSX.Element {
             <Typography gutterBottom variant='h5' component='h2'>
               {items[0]?.snippet?.title}
             </Typography>
-            <FavoriteButton item={items[0]} />
+            <FavoriteButton item={items[0]} isComplete={true} />
           </TitleContainer>
           <JustifyText variant='body2' color='textSecondary'>
             {items[0]?.snippet?.description}

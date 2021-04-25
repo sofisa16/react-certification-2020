@@ -2,15 +2,36 @@ import React, {useState, useContext, useEffect} from 'react';
 import {YouTubeResponseItems} from '../../data-types/YoutubeAPI';
 import Button from '@material-ui/core/Button';
 import {GlobalContext} from '../../contexts/GlobalContext';
+import Favorite from '@material-ui/icons/Favorite';
+import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
+import styled from 'styled-components';
+
+interface FloatButtonProps {
+  isComplete: boolean;
+}
+
+const FloatButton = styled.div<FloatButtonProps>`
+  ${
+    ({ isComplete }) => {
+      return !isComplete && `
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        z-index: 1;
+      `;
+    }
+  }
+`;
 
 interface FavoriteButtonProps {
   item: YouTubeResponseItems;
+  isComplete: boolean;
 }
 
 function FavoriteButton(props: FavoriteButtonProps): JSX.Element {
-  const {item} = props;
+  const {item, isComplete} = props;
   const {favoriteVideos, dispatchFav, authenticated} = useContext(GlobalContext);
-  const [buttonLabel, setButtonLabel] = useState<string>('Agregar a favoritos');
+  const [isFav, setIsFav] = useState<boolean>(false);
 
   function toogleAddFavorite(): void {
     const id = typeof(item.id) === 'string' ? item.id : item.id?.videoId;
@@ -36,10 +57,10 @@ function FavoriteButton(props: FavoriteButtonProps): JSX.Element {
           : item?.id?.videoId
         : undefined;
       if (favoriteVideos[`${id}`] && Object.keys(favoriteVideos[`${id}`]).length !== 0) {
-        setButtonLabel('Remover de favoritos');
+        setIsFav(true);
       }
       else {
-        setButtonLabel('Agregar a favoritos');
+        setIsFav(false);
       }
     },
     [favoriteVideos, item]
@@ -49,7 +70,23 @@ function FavoriteButton(props: FavoriteButtonProps): JSX.Element {
     <>
       {
         authenticated &&
-          <Button onClick={toogleAddFavorite}>{buttonLabel}</Button>
+          <FloatButton isComplete={isComplete}>
+            <Button
+              onClick={toogleAddFavorite}
+              title={isFav ? 'Remover de favoritos' : 'Agregar a favoritos'}
+              variant={isComplete ? undefined : 'contained'}
+            >
+              {
+                isFav
+                  ? isComplete
+                    ? 'Remover de favoritos'
+                    : <Favorite />
+                  : isComplete
+                    ? 'Agregar a favoritos'
+                    : <FavoriteBorder />
+              }
+            </Button>
+          </FloatButton>
       }
     </>
   );

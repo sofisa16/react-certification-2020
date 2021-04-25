@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import Card from '../Card/Card';
+import CardWithFav from '../CardWithFav/CardWithFav';
 import styled from 'styled-components';
 import {YouTubeResponseItems} from './../../data-types/YoutubeAPI';
 
@@ -23,15 +23,11 @@ function Mosaic(props: MosaicProps): JSX.Element {
       const cards: JSX.Element[] = [];
       if (items) {
         for(const item of items) {
-          const id = typeof(item.id) === 'string' ? item.id : item?.id?.videoId;
           if(item.snippet) {
             cards.push(
-              <Card
-                title={item.snippet.title}
-                thumbnails={item.snippet.thumbnails.high.url}
-                description={item.snippet.description}
-                videoId={`${id}`}
-                key={`${item.snippet.title}${item.snippet.publishedAt}`}
+              <CardWithFav
+                item={item}
+                key={`${item?.snippet?.title}${item?.snippet?.publishedAt}_mosaic`}
               />
             );
           }
