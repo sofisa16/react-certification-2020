@@ -7,7 +7,7 @@ import renderer from 'react-test-renderer';
 import {GlobalContextProvider} from './../../../contexts/GlobalContext';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
-describe('Testing Testing component', () => {
+describe('Testing Header component', () => {
   beforeEach(
     () => {
       JSON.parse = jest.fn();

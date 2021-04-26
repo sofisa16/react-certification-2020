@@ -6,14 +6,14 @@ import { Router } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import {GlobalContextProvider} from '../../../../../contexts/GlobalContext';
 
-describe('Testing Testing component', () => {
+describe('Testing SearchBox component', () => {
   beforeEach(
     () => {
       JSON.parse = jest.fn();
     }
   );
 
-  it('renders SearchBox', () => {
+  it('renders SearchBox in the screen', () => {
     const history = createMemoryHistory();
     const route = '/';
     history.push(route);
