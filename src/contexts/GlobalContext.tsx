@@ -9,6 +9,7 @@ import {
 import {initialState, reducer, FavoriteVideos, Action} from './../components/FavoritesView/addToFavorites';
 import {AUTH_STORAGE_KEY, AUTH_AVATAR, FAVORITES_VIDEOS} from './../utils/constants';
 import {storage} from './../utils/storage';
+import { useAuth0 } from "@auth0/auth0-react";
 
 interface GlobalContextValues {
   search: string;
@@ -60,6 +61,23 @@ const GlobalContextProvider: React.FunctionComponent<GlobalContextProviderProps>
     const [favoriteVideos, dispatchFav] = useReducer(reducer, initialState);
     const [authenticated, setAuthenticated] = useState<boolean>(false);
     const [avatar, setAvatar] = useState<string>('');
+    const { user, isAuthenticated } = useAuth0();
+
+    useEffect(
+      () => {
+        setAuthenticated(isAuthenticated);
+      },
+      [isAuthenticated]
+    );
+
+    useEffect(
+      () => {
+        if (user) {
+          setAvatar(user.picture);
+        }
+      },
+      [user]
+    );
 
     useEffect(
       () => {

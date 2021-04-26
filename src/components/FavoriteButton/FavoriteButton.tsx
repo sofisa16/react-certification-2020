@@ -24,8 +24,16 @@ const FloatButton = styled.div<FloatButtonProps>`
 `;
 
 const SizeButton = styled(Button)`
-  min-width: 36px !important;
-  width: 36px;
+  ${
+    ({ variant }) => {
+      if (variant === 'contained') {
+        return `
+          min-width: 36px !important;
+          width: 36px;
+        `;
+      }
+    }
+  }
 `;
 
 interface FavoriteButtonProps {

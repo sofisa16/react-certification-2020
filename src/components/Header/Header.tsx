@@ -23,6 +23,7 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import {AUTH_STORAGE_KEY, AUTH_AVATAR, FAVORITES_VIDEOS} from './../../utils/constants';
 import {storage} from './../../utils/storage';
+import { useAuth0 } from "@auth0/auth0-react";
 
 const MenuMargin = styled.div`
   margin-right: 16px;
@@ -67,6 +68,7 @@ function Header(): JSX.Element {
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
   const [openLogin, setOpenLogin] = useState<boolean>(false);
   const history = useHistory();
+  const { loginWithRedirect, logout } = useAuth0();
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     event.preventDefault();
@@ -108,6 +110,7 @@ function Header(): JSX.Element {
     storage.set(AUTH_AVATAR, '');
     storage.set(FAVORITES_VIDEOS, {});
     handleClose();
+    logout();
   }
 
   return (
@@ -174,7 +177,10 @@ function Header(): JSX.Element {
               {
                 authenticated
                   ? <MenuItem onClick={logOut}>Log out</MenuItem>
-                  : <MenuItem onClick={doOpenLogin}>Log in</MenuItem>
+                  : [
+                      <MenuItem onClick={doOpenLogin} key='doOpenLogin'>Log in</MenuItem>,
+                      <MenuItem onClick={loginWithRedirect} key='loginWithRedirect'>Auth0 log in</MenuItem>
+                    ]
               }
             </Menu>
             <Login open={openLogin} setOpen={setOpenLogin} />
