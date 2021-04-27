@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">30.77% </span>
+                <span class="strong">7.69% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>8/26</span>
+                <span class='fraction'>2/26</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">25% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>1/4</span>
+                <span class='fraction'>0/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">16.67% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>1/6</span>
+                <span class='fraction'>0/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">30.77% </span>
+                <span class="strong">7.69% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>8/26</span>
+                <span class='fraction'>2/26</span>
             </div>
         
             
@@ -170,8 +170,7 @@
 <a name='L111'></a><a href='#L111'>111</a>
 <a name='L112'></a><a href='#L112'>112</a>
 <a name='L113'></a><a href='#L113'>113</a>
-<a name='L114'></a><a href='#L114'>114</a>
-<a name='L115'></a><a href='#L115'>115</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L114'></a><a href='#L114'>114</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -186,25 +185,21 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -239,7 +234,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -273,7 +269,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -299,6 +297,7 @@ import {GlobalContext} from '../../contexts/GlobalContext';
 import {AUTH_STORAGE_KEY, AUTH_AVATAR} from './../../utils/constants';
 import {storage} from './../../utils/storage';
 import Alert from '@material-ui/lab/Alert';
+import { useHistory } from 'react-router-dom';
 &nbsp;
 const TextFieldSize = styled(TextField)`
   width: 332px;
@@ -308,17 +307,12 @@ const Container = styled.div`
   display: grid;
 `;
 &nbsp;
-interface LoginProps {
-  open: boolean;
-  setOpen: React.Dispatch&lt;React.SetStateAction&lt;boolean&gt;&gt;;
-}
-&nbsp;
-function Login(props: LoginProps): JSX.Element {
-  const {open, setOpen} = props;
-  const [username, setUsername] = useState&lt;string&gt;('');
-  const [password, setPassword] = useState&lt;string&gt;('');
-  const {setAuthenticated, setAvatar} = useContext(GlobalContext);
-  const [errorMessage, setErrorMessage] = useState&lt;string&gt;('');
+function <span class="fstat-no" title="function not covered" >Login(</span>): JSX.Element {
+  const [username, setUsername] = <span class="cstat-no" title="statement not covered" >useState&lt;string&gt;('');</span>
+  const [password, setPassword] = <span class="cstat-no" title="statement not covered" >useState&lt;string&gt;('');</span>
+  const {setAuthenticated, setAvatar} = <span class="cstat-no" title="statement not covered" >useContext(GlobalContext);</span>
+  const [errorMessage, setErrorMessage] = <span class="cstat-no" title="statement not covered" >useState&lt;string&gt;('');</span>
+  const history = <span class="cstat-no" title="statement not covered" >useHistory();</span>
 &nbsp;
   async function <span class="fstat-no" title="function not covered" >loginIn(</span>username: string, password: string): Promise&lt;void&gt; {
 <span class="cstat-no" title="statement not covered" >    try {</span>
@@ -328,7 +322,7 @@ function Login(props: LoginProps): JSX.Element {
 <span class="cstat-no" title="statement not covered" >      setAuthenticated(true);</span>
 <span class="cstat-no" title="statement not covered" >      storage.set(AUTH_STORAGE_KEY, true);</span>
 <span class="cstat-no" title="statement not covered" >      storage.set(AUTH_AVATAR, user.avatarUrl);</span>
-<span class="cstat-no" title="statement not covered" >      setOpen(false);</span>
+<span class="cstat-no" title="statement not covered" >      history.push('/');</span>
     }
     catch (error) {
 <span class="cstat-no" title="statement not covered" >      setErrorMessage(error.message);</span>
@@ -352,11 +346,14 @@ function Login(props: LoginProps): JSX.Element {
       }
     }
   }
+  
+  const goBack = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >()</span>: void =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    history.goBack();</span>
+  };
 &nbsp;
-  return (
+<span class="cstat-no" title="statement not covered" >  return (</span>
     &lt;Dialog
-      open={open}
-      onClose={<span class="fstat-no" title="function not covered" >()</span>: void =&gt; { <span class="cstat-no" title="statement not covered" >setOpen(false); </span>}}
+      open
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
     &gt;
@@ -366,7 +363,7 @@ function Login(props: LoginProps): JSX.Element {
           &lt;Container&gt;
             {
               errorMessage &amp;&amp;
-<span class="branch-1 cbranch-no" title="branch not covered" >              &lt;Alert severity="error"&gt;{errorMessage}&lt;/Alert&gt;</span>
+              &lt;Alert severity="error"&gt;{errorMessage}&lt;/Alert&gt;
             }
             &lt;TextFieldSize
               id="username"
@@ -387,7 +384,7 @@ function Login(props: LoginProps): JSX.Element {
         &lt;/DialogContentText&gt;
       &lt;/DialogContent&gt;
       &lt;DialogActions&gt;
-        &lt;Button onClick={<span class="fstat-no" title="function not covered" >()</span>: void =&gt; { <span class="cstat-no" title="statement not covered" >setOpen(false); </span>}} color="primary"&gt;
+        &lt;Button onClick={goBack} color="primary"&gt;
           Cancel
         &lt;/Button&gt;
         &lt;Button onClick={onLoginClick} color="primary" autoFocus&gt;
@@ -406,7 +403,7 @@ export default Login;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank">istanbul</a>
-                at Sun Apr 25 2021 15:45:35 GMT-0700 (Pacific Daylight Time)
+                at Mon Apr 26 2021 21:35:41 GMT-0700 (Pacific Daylight Time)
             </div>
         </div>
         <script src="../../prettify.js"></script>

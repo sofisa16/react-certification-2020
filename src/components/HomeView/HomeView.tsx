@@ -2,7 +2,7 @@ import React, {useState, useEffect, useContext} from 'react';
 import {YouTubeResponse, YouTubeResponseItems} from './../../data-types/YoutubeAPI';
 import {GlobalContext} from '../../contexts/GlobalContext';
 import useYouTubeAPI from './../../hooks/useYouTubeAPI';
-import home_videos from './../../data/home_videos.json';
+//import home_videos from './../../data/home_videos.json';
 import Mosaic from './../Mosaic/Mosaic';
 
 function HomeView(): JSX.Element {

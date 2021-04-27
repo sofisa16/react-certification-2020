@@ -3,7 +3,7 @@
 exports[`renders RelatedVideo component 1`] = `
 <a
   className="sc-bdfBwQ sc-jSgupP lclvs hkRxCS"
-  href="/videoId"
+  href="/videos/videoId"
   onClick={[Function]}
 >
   <div
