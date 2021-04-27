@@ -22,7 +22,7 @@ describe('localstorage tests', () => {
   it('should set an inexisting object', () => {
     console.error = jest.fn();
     const result = storage.get('h');
-    expect(result).toBe('{}');
+    expect(JSON.stringify(result)).toBe('{}');
     expect(console.error).toHaveBeenCalledWith('Error parsing storage item "h".');
   });
 

@@ -1,5 +1,5 @@
 const storage = {
-  get: (key: string): Record<string, any> => {
+  get: (key: string): Record<string, unknown> => {
     try {
       const rawValue = window.localStorage.getItem(key);
       return JSON.parse(rawValue ? rawValue : '{}');
@@ -10,7 +10,7 @@ const storage = {
     }
   },
 
-  set: (key: string, value: any): void => {
+  set: (key: string, value: unknown): void => {
     window.localStorage.setItem(key, JSON.stringify(value));
   },
 };
