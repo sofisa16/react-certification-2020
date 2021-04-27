@@ -1,22 +1,10 @@
 import React from 'react';
 import {useLocation} from 'react-router-dom';
-import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-import styled from 'styled-components';
 import {NoStyleLink} from './../../styles/common';
-
-const CardRoot = styled(Card)`
-  width: 345px;
-  height: 345px;
-  margin: 10px;
-`;
-
-const CardMediaRoot = styled(CardMedia)`
-  height: 140px;
-`;
+import Styled from './Card.styled';
 
 interface MediaCardProps {
   title: string;
@@ -27,10 +15,11 @@ interface MediaCardProps {
 
 function MediaCard(props: MediaCardProps): JSX.Element {
   const {title, thumbnails, description, videoId} = props;
+  const { CardRoot, CardMediaRoot } = Styled;
   const {pathname} = useLocation<Location>();
   const link = pathname === '/favorites' 
     ? `/favorites/${videoId}`
-    :`/${videoId}`;
+    :`/videos/${videoId}`;
 
   return (
     <NoStyleLink to={link}>

@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import {useParams} from 'react-router-dom';
-import styled from 'styled-components';
 import useYouTubeAPI from '../../hooks/useYouTubeAPI';
 import {YouTubeResponse, YouTubeResponseItems} from '../../data-types/YoutubeAPI';
 //import videos_id from './../../data/videos_id.json';
@@ -9,55 +8,11 @@ import {YouTubeResponse, YouTubeResponseItems} from '../../data-types/YoutubeAPI
 import Typography from '@material-ui/core/Typography';
 import RelatedVideo from '../RelatedVideo/RelatedVideo';
 import FavoriteButton from '../../components/FavoriteButton/FavoriteButton';
+import Styled from './DetailsView.styled';
 
 export interface DetailsViewParams {
   videoId: string;
 }
-
-const ParentContainer = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  padding: 20px;
-  box-sizing: border-box;
-`;
-
-const RightContainer = styled.div`
-  width: 70%;
-  height: 100%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  padding-right: 15px;
-`;
-
-const LeftContainer = styled.div`
-  width: 30%;
-  height: 100%;
-  overflow: scroll;
-`;
-
-const DownContainer = styled.div`
-  padding: 15px 30px;
-`;
-
-const TitleContainer = styled.div`
-  padding-bottom: 15px;
-  display: grid;
-  grid-template-columns: 1fr auto;
-`;
-
-const JustifyText = styled(Typography)`
-  text-align: justify;
-`;
-
-const Iframe = styled.div`
-  > iframe {
-    width: 100%;
-    height: 500px;
-  }
-`;
 
 interface DetailsViewProps {
   relatedItems: YouTubeResponseItems[],
@@ -66,6 +21,15 @@ interface DetailsViewProps {
 
 function DetailsView(props: DetailsViewProps): JSX.Element {
   const {relatedItems, path} = props;
+  const {
+    ParentContainer,
+    RightContainer,
+    LeftContainer,
+    DownContainer,
+    TitleContainer,
+    JustifyText,
+    Iframe,
+  } = Styled;
   const {videoId} = useParams<DetailsViewParams>();
   const {getFromYouTubeAPI} = useYouTubeAPI();
   const [items, setItems] = useState<YouTubeResponseItems[]>([]);

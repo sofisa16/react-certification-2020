@@ -1,12 +1,8 @@
 import React, {useState} from 'react';
-import styled from 'styled-components';
 import {YouTubeResponseItems} from '../../data-types/YoutubeAPI';
 import Card from './../Card/Card';
 import FavoriteButton from '../FavoriteButton/FavoriteButton';
-
-const Container = styled.div`
-  position: relative;
-`;
+import Container from '../CardWithFav/CardWithFav.styled';
 
 interface CardWithFavProps {
   item: YouTubeResponseItems;

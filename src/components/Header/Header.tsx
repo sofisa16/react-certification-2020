@@ -16,8 +16,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import {GlobalContext} from './../../contexts/GlobalContext';
 import HomeIcon from '@material-ui/icons/Home';
 import FavoriteIcon from '@material-ui/icons/Favorite';
-import {useHistory} from 'react-router-dom';
-import Login from './../Login/Login';
+import {useHistory, useLocation} from 'react-router-dom';
 import Avatar from '@material-ui/core/Avatar';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -66,9 +65,9 @@ const StyledList = styled(List)`
 function Header(): JSX.Element {
   const { darkState, setDarkState, authenticated, avatar, setAuthenticated, setAvatar, dispatchFav } = useContext(GlobalContext);
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
-  const [openLogin, setOpenLogin] = useState<boolean>(false);
   const history = useHistory();
   const { loginWithRedirect, logout } = useAuth0();
+  const location = useLocation();
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     event.preventDefault();
@@ -96,7 +95,7 @@ function Header(): JSX.Element {
   };
 
   function doOpenLogin(): void {
-    setOpenLogin(true);
+    history.push('/login', { background: location });
     handleClose();
   }
 
@@ -163,8 +162,8 @@ function Header(): JSX.Element {
             >
               {
                 authenticated
-                ? <Avatar alt={'avatar'} src={avatar} />
-                : <AccountCircle />
+                  ? <Avatar alt={'avatar'} src={avatar} />
+                  : <AccountCircle />
               }
             </IconButton>
             <Menu
@@ -178,12 +177,13 @@ function Header(): JSX.Element {
                 authenticated
                   ? <MenuItem onClick={logOut}>Log out</MenuItem>
                   : [
-                      <MenuItem onClick={doOpenLogin} key='doOpenLogin'>Log in</MenuItem>,
+                      <MenuItem onClick={doOpenLogin} key='doOpenLogin'>
+                        Login
+                      </MenuItem>,
                       <MenuItem onClick={loginWithRedirect} key='loginWithRedirect'>Auth0 log in</MenuItem>
                     ]
               }
             </Menu>
-            <Login open={openLogin} setOpen={setOpenLogin} />
           </RightSide>
         </ToolbarGrid>
       </StyledAppBar>

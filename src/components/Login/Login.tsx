@@ -12,6 +12,7 @@ import {GlobalContext} from '../../contexts/GlobalContext';
 import {AUTH_STORAGE_KEY, AUTH_AVATAR} from './../../utils/constants';
 import {storage} from './../../utils/storage';
 import Alert from '@material-ui/lab/Alert';
+import { useHistory } from 'react-router-dom';
 
 const TextFieldSize = styled(TextField)`
   width: 332px;
@@ -21,17 +22,12 @@ const Container = styled.div`
   display: grid;
 `;
 
-interface LoginProps {
-  open: boolean;
-  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
-function Login(props: LoginProps): JSX.Element {
-  const {open, setOpen} = props;
+function Login(): JSX.Element {
   const [username, setUsername] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const {setAuthenticated, setAvatar} = useContext(GlobalContext);
   const [errorMessage, setErrorMessage] = useState<string>('');
+  const history = useHistory();
 
   async function loginIn(username: string, password: string): Promise<void> {
     try {
@@ -41,7 +37,7 @@ function Login(props: LoginProps): JSX.Element {
       setAuthenticated(true);
       storage.set(AUTH_STORAGE_KEY, true);
       storage.set(AUTH_AVATAR, user.avatarUrl);
-      setOpen(false);
+      history.push('/');
     }
     catch (error) {
       setErrorMessage(error.message);
@@ -65,11 +61,14 @@ function Login(props: LoginProps): JSX.Element {
       }
     }
   }
+  
+  const goBack = (): void => {
+    history.goBack();
+  };
 
   return (
     <Dialog
-      open={open}
-      onClose={(): void => { setOpen(false); }}
+      open
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
     >
@@ -100,7 +99,7 @@ function Login(props: LoginProps): JSX.Element {
         </DialogContentText>
       </DialogContent>
       <DialogActions>
-        <Button onClick={(): void => { setOpen(false); }} color="primary">
+        <Button onClick={goBack} color="primary">
           Cancel
         </Button>
         <Button onClick={onLoginClick} color="primary" autoFocus>

@@ -42,7 +42,7 @@ interface RelatedVideoProps {
 
 function RelatedVideo(props: RelatedVideoProps): JSX.Element {
   const {title, thumbnails, videoId} = props;
-  const link = `/${videoId}`;
+  const link = `/videos/${videoId}`;
 
   return (
     <ColorNoStyleLink to={link}>
