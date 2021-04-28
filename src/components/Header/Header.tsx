@@ -109,7 +109,9 @@ function Header(): JSX.Element {
     storage.set(AUTH_AVATAR, '');
     storage.set(FAVORITES_VIDEOS, {});
     handleClose();
-    logout();
+    logout({
+      returnTo: 'https://sofisa16.netlify.app/',
+    });
   }
 
   return (
