@@ -10,7 +10,7 @@ function App(): JSX.Element {
   return (
     <Auth0Provider
       domain="sofisa16.us.auth0.com"
-      clientId="2Uxf6ZBMb4HfrMI3JTBqC8XuWQT7kpWF"
+      clientId={`${process.env.REACT_APP_AUTH0_CLIENTID}`}
       redirectUri={window.location.origin}
     >
       <GlobalContextProvider>
