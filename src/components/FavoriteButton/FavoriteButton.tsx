@@ -1,40 +1,9 @@
 import React, {useState, useContext, useEffect} from 'react';
 import {YouTubeResponseItems} from '../../data-types/YoutubeAPI';
-import Button from '@material-ui/core/Button';
 import {GlobalContext} from '../../contexts/GlobalContext';
 import Favorite from '@material-ui/icons/Favorite';
 import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
-import styled from 'styled-components';
-
-interface FloatButtonProps {
-  isComplete: boolean;
-}
-
-const FloatButton = styled.div<FloatButtonProps>`
-  ${
-    ({ isComplete }) => {
-      return !isComplete && `
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        z-index: 1;
-      `;
-    }
-  }
-`;
-
-const SizeButton = styled(Button)`
-  ${
-    ({ variant }) => {
-      if (variant === 'contained') {
-        return `
-          min-width: 36px !important;
-          width: 36px;
-        `;
-      }
-    }
-  }
-`;
+import Styled from './FavoriteButton.styled';
 
 interface FavoriteButtonProps {
   item: YouTubeResponseItems;
@@ -45,6 +14,10 @@ function FavoriteButton(props: FavoriteButtonProps): JSX.Element {
   const {item, isComplete} = props;
   const {favoriteVideos, dispatchFav, authenticated} = useContext(GlobalContext);
   const [isFav, setIsFav] = useState<boolean>(false);
+  const {
+    FloatButton,
+    SizeButton,
+  } = Styled;
 
   function toogleAddFavorite(): void {
     const id = typeof(item.id) === 'string' ? item.id : item.id?.videoId;

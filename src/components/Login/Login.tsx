@@ -1,26 +1,17 @@
 import React, {useState, useContext} from 'react';
-import styled from 'styled-components';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import TextField from '@material-ui/core/TextField';
 import loginApi, {User} from './../../data/login.api';
 import {GlobalContext} from '../../contexts/GlobalContext';
 import {AUTH_STORAGE_KEY, AUTH_AVATAR} from './../../utils/constants';
 import {storage} from './../../utils/storage';
 import Alert from '@material-ui/lab/Alert';
 import { useHistory } from 'react-router-dom';
-
-const TextFieldSize = styled(TextField)`
-  width: 332px;
-`;
-
-const Container = styled.div`
-  display: grid;
-`;
+import Styled from './Login.styled';
 
 function Login(): JSX.Element {
   const [username, setUsername] = useState<string>('');
@@ -28,6 +19,10 @@ function Login(): JSX.Element {
   const {setAuthenticated, setAvatar} = useContext(GlobalContext);
   const [errorMessage, setErrorMessage] = useState<string>('');
   const history = useHistory();
+  const {
+    TextFieldSize,
+    Container,
+  } = Styled;
 
   async function loginIn(username: string, password: string): Promise<void> {
     try {

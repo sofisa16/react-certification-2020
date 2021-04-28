@@ -1,13 +1,10 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import {Link} from 'react-router-dom';
-import styled from 'styled-components';
-
-const Container = styled.div`
-  margin: 32px;
-`;
+import Styled from './NotFound.styled';
 
 function NotFound(): JSX.Element {
+  const { Container } = Styled;
   return (
     <Container>
       <Typography gutterBottom variant='h5' component='h2'>

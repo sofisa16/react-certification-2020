@@ -1,14 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import CardWithFav from '../CardWithFav/CardWithFav';
-import styled from 'styled-components';
+import Styled from './Mosaic.styled';
 import {YouTubeResponseItems} from './../../data-types/YoutubeAPI';
-
-const CardMediaRoot = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(365px, 1fr));
-  margin: 32px;
-  justify-items: center;
-`;
 
 interface MosaicProps {
   items: YouTubeResponseItems[];
@@ -17,6 +10,9 @@ interface MosaicProps {
 function Mosaic(props: MosaicProps): JSX.Element {
   const {items} = props;
   const [cards, setCards] = useState<JSX.Element[]>([]);
+  const {
+    CardMediaRoot
+  } = Styled;
 
   useEffect(
     () => {
