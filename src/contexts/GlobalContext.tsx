@@ -11,7 +11,7 @@ import {AUTH_STORAGE_KEY, AUTH_AVATAR, FAVORITES_VIDEOS} from './../utils/consta
 import {storage} from './../utils/storage';
 import { useAuth0 } from "@auth0/auth0-react";
 
-interface GlobalContextValues {
+export interface GlobalContextValues {
   search: string;
   setSearch: React.Dispatch<React.SetStateAction<string>>;
   darkState: boolean;

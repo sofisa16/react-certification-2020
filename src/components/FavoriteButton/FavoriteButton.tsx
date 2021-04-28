@@ -1,6 +1,6 @@
-import React, {useState, useContext, useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import {YouTubeResponseItems} from '../../data-types/YoutubeAPI';
-import {GlobalContext} from '../../contexts/GlobalContext';
+import useGlobalContext from '../../contexts/useGlobalContext';
 import Favorite from '@material-ui/icons/Favorite';
 import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
 import Styled from './FavoriteButton.styled';
@@ -12,7 +12,7 @@ interface FavoriteButtonProps {
 
 function FavoriteButton(props: FavoriteButtonProps): JSX.Element {
   const {item, isComplete} = props;
-  const {favoriteVideos, dispatchFav, authenticated} = useContext(GlobalContext);
+  const {favoriteVideos, dispatchFav, authenticated} = useGlobalContext();
   const [isFav, setIsFav] = useState<boolean>(false);
   const {
     FloatButton,
