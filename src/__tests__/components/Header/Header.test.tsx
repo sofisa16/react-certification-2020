@@ -3,7 +3,6 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import Header from '../../../components/Header/Header';
 import { createMemoryHistory } from 'history';
 import { Router } from 'react-router-dom';
-import renderer from 'react-test-renderer';
 import {GlobalContextProvider} from './../../../contexts/GlobalContext';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
@@ -56,17 +55,15 @@ describe('Testing Header component', () => {
     const route = '/';
     history.push(route);
   
-    const tree = renderer
-      .create(
-        <GlobalContextProvider>
-          <CssBaseline>
-            <Router history={history}>
-              <Header />
-            </Router>
-          </CssBaseline>
-        </GlobalContextProvider>
-      )
-      .toJSON();
+    const tree = render(
+      <GlobalContextProvider>
+        <CssBaseline>
+          <Router history={history}>
+            <Header />
+          </Router>
+        </CssBaseline>
+      </GlobalContextProvider>
+    )
     expect(tree).toMatchSnapshot();
   });
 });
