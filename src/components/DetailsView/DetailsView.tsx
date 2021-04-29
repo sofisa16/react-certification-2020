@@ -92,7 +92,7 @@ function DetailsView(props: DetailsViewProps): JSX.Element {
   }
 
   return (
-    <ParentContainer>
+    <ParentContainer data-testid='DetailsView'>
       <RightContainer>
         <Iframe dangerouslySetInnerHTML={iframe(embedHtml)}></Iframe>
         <DownContainer>

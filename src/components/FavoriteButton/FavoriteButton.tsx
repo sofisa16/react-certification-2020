@@ -56,7 +56,7 @@ function FavoriteButton(props: FavoriteButtonProps): JSX.Element {
     <>
       {
         authenticated &&
-          <FloatButton isComplete={isComplete}>
+          <FloatButton isComplete={isComplete} data-testid='FavoriteButton'>
             <SizeButton
               onClick={toogleAddFavorite}
               title={isFav ? 'Remover de favoritos' : 'Agregar a favoritos'}
@@ -66,10 +66,10 @@ function FavoriteButton(props: FavoriteButtonProps): JSX.Element {
                 isFav
                   ? isComplete
                     ? 'Remover de favoritos'
-                    : <Favorite />
+                    : <Favorite data-testid='Favorite' />
                   : isComplete
                     ? 'Agregar a favoritos'
-                    : <FavoriteBorder />
+                    : <FavoriteBorder data-testid='FavoriteBorder' />
               }
             </SizeButton>
           </FloatButton>

@@ -22,7 +22,7 @@ function CardWithFav(props: CardWithFavProps): JSX.Element {
   }
 
   return (
-    <Container onMouseLeave={onMouseLeave} onMouseEnter={onMouseEnter}>
+    <Container onMouseLeave={onMouseLeave} onMouseEnter={onMouseEnter} data-testid='CardWithFav'>
       {
         showFavButton &&
         <FavoriteButton item={item} isComplete={false} />

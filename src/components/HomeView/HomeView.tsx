@@ -30,7 +30,7 @@ function HomeView(): JSX.Element {
   );
 
   return (
-    <Mosaic items={items} />
+    <Mosaic items={items} data-testid='homeview' />
   );
 }
 
