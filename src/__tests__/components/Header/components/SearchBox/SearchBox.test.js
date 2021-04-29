@@ -1,7 +1,7 @@
 import React from 'react';
-import {render, screen, fireEvent} from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import SearchBox from '../../../../../components/Header/components/SearchBox/SearchBox';
-import {GlobalContextProvider} from '../../../../../contexts/GlobalContext';
+import { GlobalContextProvider } from '../../../../../contexts/GlobalContext';
 import { createMemoryHistory } from 'history';
 import { Router } from 'react-router-dom';
 
@@ -51,6 +51,5 @@ describe('Searchbar component', () => {
     fireEvent.change(input, { target: { value: 'wizeline' } });
     expect(input).toBeInTheDocument();
     expect(input.value).toBe('wizeline');
-    //expect(mockHistoryPush).toHaveBeenCalledWith('/');
   });
 });

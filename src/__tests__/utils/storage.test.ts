@@ -19,13 +19,6 @@ describe('localstorage tests', () => {
     expect(storageMock['a']).toEqual('1');
   });
 
-  it('should set an inexisting object', () => {
-    console.error = jest.fn();
-    const result = storage.get('h');
-    expect(JSON.stringify(result)).toBe('{}');
-    expect(console.error).toHaveBeenCalledWith('Error parsing storage item "h".');
-  });
-
   it('should get an object', () => {
     storage.set('R', 'Say what you feel.');
     const result = storage.get('R');

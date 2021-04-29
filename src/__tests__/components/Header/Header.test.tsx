@@ -3,7 +3,7 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import Header from '../../../components/Header/Header';
 import { createMemoryHistory } from 'history';
 import { Router } from 'react-router-dom';
-import {GlobalContextProvider} from './../../../contexts/GlobalContext';
+import { GlobalContextProvider } from './../../../contexts/GlobalContext';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
 describe('Testing Header component', () => {
@@ -48,22 +48,5 @@ describe('Testing Header component', () => {
     const input = utils.getByLabelText('Dark mode') as HTMLInputElement;
     fireEvent.change(input, { target: { checked: true } });
     expect(input).toBeChecked();
-  });
-  
-  test('renders Header component', () => {
-    const history = createMemoryHistory();
-    const route = '/';
-    history.push(route);
-  
-    const tree = render(
-      <GlobalContextProvider>
-        <CssBaseline>
-          <Router history={history}>
-            <Header />
-          </Router>
-        </CssBaseline>
-      </GlobalContextProvider>
-    )
-    expect(tree).toMatchSnapshot();
   });
 });
