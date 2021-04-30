@@ -85,7 +85,7 @@ const GlobalContextProvider: React.FunctionComponent<GlobalContextProviderProps>
         setAvatar(String(storage.get(AUTH_AVATAR)));
         dispatchFav({
           type: 'addAll',
-          all: JSON.parse(String(storage.get(FAVORITES_VIDEOS))),
+          all: storage.get(FAVORITES_VIDEOS) as FavoriteVideos,
         });
       },
       []
