@@ -2,15 +2,15 @@ import React from 'react';
 import RelatedVideo from '../../../components/RelatedVideo/RelatedVideo';
 import { createMemoryHistory } from 'history';
 import { Router } from 'react-router-dom';
-import renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 
-it('renders RelatedVideo component', () => {
-  const history = createMemoryHistory();
-  const route = '/';
-  history.push(route);
-
-  const tree = renderer
-    .create(
+describe('renders RelatedVideo component', () => {
+  it('renders RelatedVideo component', () => {
+    const history = createMemoryHistory();
+    const route = '/';
+    history.push(route);
+  
+    const tree = render(
       <Router history={history}>
         <RelatedVideo
           title="title"
@@ -19,7 +19,7 @@ it('renders RelatedVideo component', () => {
           key="key"
         />
       </Router>
-    )
-    .toJSON();
-  expect(tree).toMatchSnapshot();
+    );
+    expect(tree.getByText('title')).toBeInTheDocument();
+  });
 });

@@ -1,33 +1,27 @@
 import React from 'react';
-import {Switch, Route} from 'react-router-dom';
 import Header from './components/Header/Header';
-import HomeView from './components/HomeView/HomeView';
-import VideoDetailsView from './components/VideoDetailsView/VideoDetailsView';
 import {GlobalContextProvider} from './contexts/GlobalContext';
 import Container from '@material-ui/core/Container';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import FavoritesView from './components/FavoritesView/FavoritesView';
+import { Auth0Provider } from '@auth0/auth0-react';
+import Routes from './Routes/Routes';
 
 function App(): JSX.Element {
   return (
-    <GlobalContextProvider>
-      <CssBaseline>
-        <Header />
-        <Container>
-          <Switch>
-            <Route exact path='/'>
-              <HomeView />
-            </Route>
-            <Route exact path='/favorites'>
-              <FavoritesView />
-            </Route>
-            <Route path='/:videoId'>
-              <VideoDetailsView />
-            </Route>
-          </Switch>
-        </Container>
-      </CssBaseline>
-    </GlobalContextProvider>
+    <Auth0Provider
+      domain="sofisa16.us.auth0.com"
+      clientId={`${process.env.REACT_APP_AUTH0_CLIENTID}`}
+      redirectUri={window.location.origin}
+    >
+      <GlobalContextProvider>
+        <CssBaseline>
+          <Header />
+          <Container>
+            <Routes />
+          </Container>
+        </CssBaseline>
+      </GlobalContextProvider>
+    </Auth0Provider>
   );
 }
 
