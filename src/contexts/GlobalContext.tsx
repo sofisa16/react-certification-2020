@@ -7,8 +7,11 @@ import {
   Theme,
 } from '@material-ui/core/styles';
 import {initialState, reducer, FavoriteVideos, Action} from './../components/FavoritesView/addToFavorites';
+import {AUTH_STORAGE_KEY, AUTH_AVATAR, FAVORITES_VIDEOS} from './../utils/constants';
+import {storage} from './../utils/storage';
+import { useAuth0 } from "@auth0/auth0-react";
 
-interface GlobalContextValues {
+export interface GlobalContextValues {
   search: string;
   setSearch: React.Dispatch<React.SetStateAction<string>>;
   darkState: boolean;
@@ -16,6 +19,10 @@ interface GlobalContextValues {
   theme: Theme;
   favoriteVideos: FavoriteVideos;
   dispatchFav: React.Dispatch<Action>;
+  authenticated: boolean;
+  setAuthenticated: React.Dispatch<React.SetStateAction<boolean>>;
+  avatar: string;
+  setAvatar: React.Dispatch<React.SetStateAction<string>>;
 }
 
 interface GlobalContextProviderProps {
@@ -34,6 +41,10 @@ const GlobalContext = React.createContext<GlobalContextValues>({
   }),
   favoriteVideos: {},
   dispatchFav: () => { return; },
+  authenticated: false,
+  setAuthenticated: () => { return; },
+  avatar: '',
+  setAvatar: () => { return; },
 });
 
 const GlobalContextProvider: React.FunctionComponent<GlobalContextProviderProps> =
@@ -48,6 +59,37 @@ const GlobalContextProvider: React.FunctionComponent<GlobalContextProviderProps>
       })
     );
     const [favoriteVideos, dispatchFav] = useReducer(reducer, initialState);
+    const [authenticated, setAuthenticated] = useState<boolean>(false);
+    const [avatar, setAvatar] = useState<string>('');
+    const { user, isAuthenticated } = useAuth0();
+
+    useEffect(
+      () => {
+        setAuthenticated(isAuthenticated);
+      },
+      [isAuthenticated]
+    );
+
+    useEffect(
+      () => {
+        if (user) {
+          setAvatar(user.picture);
+        }
+      },
+      [user]
+    );
+
+    useEffect(
+      () => {
+        setAuthenticated(Boolean(storage.get(AUTH_STORAGE_KEY)));
+        setAvatar(String(storage.get(AUTH_AVATAR)));
+        dispatchFav({
+          type: 'addAll',
+          all: storage.get(FAVORITES_VIDEOS) as FavoriteVideos,
+        });
+      },
+      []
+    );
 
     useEffect(
       () => {
@@ -65,7 +107,7 @@ const GlobalContextProvider: React.FunctionComponent<GlobalContextProviderProps>
 
     useEffect(
       () => {
-        localStorage.setItem('favoriteVideos', JSON.stringify(favoriteVideos));
+        storage.set(FAVORITES_VIDEOS, JSON.stringify(favoriteVideos));
       },
       [favoriteVideos]
     );
@@ -78,6 +120,10 @@ const GlobalContextProvider: React.FunctionComponent<GlobalContextProviderProps>
       theme,
       favoriteVideos,
       dispatchFav,
+      authenticated,
+      setAuthenticated,
+      avatar,
+      setAvatar,
     };
 
     return (

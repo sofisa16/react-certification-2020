@@ -8,16 +8,17 @@ export const initialState: FavoriteVideos = {};
 
 export interface Action {
   type: string;
-  payload: YouTubeResponseItems;
+  payload?: YouTubeResponseItems;
+  all?: FavoriteVideos;
 }
 
 export function reducer(state: FavoriteVideos, action: Action): FavoriteVideos {
-  const id = typeof(action.payload.id) === 'string' ? action.payload.id : action?.payload?.id?.videoId;
+  const id = typeof(action?.payload?.id) === 'string' ? `${action.payload.id}` : `${action?.payload?.id?.videoId}`;
   switch (action.type) {
     case 'add': {
       return {
         ...state,
-        [`${id}`]: action.payload,
+        [id]: action?.payload ? action?.payload : {},
       };
     }
     case 'remove': {
@@ -25,6 +26,14 @@ export function reducer(state: FavoriteVideos, action: Action): FavoriteVideos {
         ...state,
         [`${id}`]: {},
       };
+    }
+    case 'addAll': {
+      return {
+        ...action.all,
+      };
+    }
+    case 'removeAll': {
+      return {};
     }
     default:
       throw new Error();
